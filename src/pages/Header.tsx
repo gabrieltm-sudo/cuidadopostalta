@@ -7,11 +7,15 @@ const Header = () => {
             {/* Cabeçalho do site */}
             {/* TODO: Trabalhar na responsividade do header*/}
             <div className="ml-4 flex items-center gap-5">
-                <img src={UnipampaLogo} alt="Logo da Unipampa" className="ml-4"/>
-                <img src={Tec1Logo} alt="Logo do grupo Tec 1 - Pet-Saúde I&SD" className="ml-4 h-30"/>
+                <a href="https://unipampa.edu.br/portal/" target="_blank" rel="noopener noreferrer">
+                    <img src={UnipampaLogo} alt="Logo da Unipampa" className="ml-4"/>
+                </a>
+                <a href="https://rodrigoperaca.github.io/PETSaude-Tecnologia1/" target="_blank" rel="noopener noreferrer">
+                    <img src={Tec1Logo} alt="Logo do grupo Tec 1 - Pet-Saúde I&SD" className="ml-4 h-30"/>
+                </a>
             </div>
             
-            <h1 className="font-black text-2xl text-[#0A4D68] p-7 items-center"> 
+            <h1 className="font-black text-center text-3xl text-[#0A4D68] p-7 items-center"> 
                 Cartilha de cuidados pós alta hospitalar
             </h1>            
         </header>
