@@ -1,12 +1,12 @@
-# **Cartilha de cuidados pós alta hospitalar**
+# **Cartilha de cuidados pós-alta hospitalar**
 
-**Desenvolvido pelo grupo Tecnologia 1 do Pet-Saúde I&SD**
+**Desenvolvido pelo grupo Tecnologia 1 do PET-Saúde I&SD**
 
 ---
 
 ## Como rodar
 
-### 1. Instalação das bibliotecas e dpendências
+### 1. Instalação das bibliotecas e dependências
 ```bash
     npm install
 ```
