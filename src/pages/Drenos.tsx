@@ -1,7 +1,29 @@
+import CarouselImages from '../components/CarouselImages'
 import PageLayout from '../components/PageLayout'
 import drenoImage from '../logos/dreno.png'
-import drenoLimpeza from '../logos/drenoLimpeza.png'
+import drenoLimpezaPasso_1 from '../logos/DrenoLimpeza/drenoLimpezaPasso_1.png'
+import drenoLimpezaPasso_2 from '../logos/DrenoLimpeza/drenoLimpezaPasso_2.png'
+import drenoLimpezaPasso_3 from '../logos/DrenoLimpeza/drenoLimpezaPasso_3.png'
+import drenoLimpezaPasso_4 from '../logos/DrenoLimpeza/drenoLimpezaPasso_4.png'
+import drenoLimpezaPasso_5 from '../logos/DrenoLimpeza/drenoLimpezaPasso_5.png'
+import drenoLimpezaPasso_6 from '../logos/DrenoLimpeza/drenoLimpezaPasso_6.png'
+import drenoLimpezaPasso_7 from '../logos/DrenoLimpeza/drenoLimpezaPasso_7.png'
+import drenoLimpezaPasso_8 from '../logos/DrenoLimpeza/drenoLimpezaPasso_8.png'
+import drenoLimpezaPasso_9 from '../logos/DrenoLimpeza/drenoLimpezaPasso_9.png'
+
 import limpezaCurativo from '../logos/limpezaCurativo.png'
+
+const limpezaPassos = [
+  { id: 1, image: drenoLimpezaPasso_1, text: 'LAVAR AS MÃOS COM ÁGUA E SABÃO' },
+  { id: 2, image: drenoLimpezaPasso_2, text: 'FECHAR A PRESILHA OU CLAMPE' },
+  { id: 3, image: drenoLimpezaPasso_3, text: 'ABRIR A TAMPA' },
+  { id: 4, image: drenoLimpezaPasso_4, text: 'ESVAZIAR O LÍQUIDO DO COLETOR EM UM POTE PLÁSTICO OU TIGELA' },
+  { id: 5, image: drenoLimpezaPasso_5, text: 'MEDIR A DRENAGEM' },
+  { id: 6, image: drenoLimpezaPasso_6, text: 'DESPREZAR O LÍQUIDO NO VASO SANITÁRIO' },
+  { id: 7, image: drenoLimpezaPasso_7, text: 'REFAZER O VÁCUO, EMPURRANDO O COLETOR PARA BAIXO E FECHANDO A TAMPA' },
+  { id: 8, image: drenoLimpezaPasso_8, text: 'FECHAR A TAMPA' },
+  { id: 9, image: drenoLimpezaPasso_9, text: 'ABRIR O CLAMPE' },
+];
 
 const Drenos = () => {
 	const tocItems = [
@@ -48,7 +70,7 @@ const Drenos = () => {
 						Passo a passo para limpeza
 					</h3>
 					<div className="p-4">
-						<img src={drenoLimpeza} alt="Passo a passo para limpeza do dreno Suctor" className="mx-auto max-w-full" />
+						<CarouselImages steps={limpezaPassos} />
 					</div>
 				</section>
 

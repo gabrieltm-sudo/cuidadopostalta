@@ -1,6 +1,7 @@
 import PageLayout from '../components/PageLayout'
 import locaisLesoes from '../logos/locaisAparecimentoLesaoPressao.png'
 import imagemGenerica from '../logos/imagemGenerica.png'
+import comoEvitar from '../logos/comoEvitarLesaoporPressao.png'
 import lesoesAparecimento from '../logos/sinaisAparecem.png'
 import lesoesAparecimento2 from '../logos/sinaisAparecem1.png'
 
@@ -31,7 +32,7 @@ const LesaoPorPressao = () => {
                     <h2 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">
                         Como evitar?
                     </h2>
-                    <img src={imagemGenerica} alt="Como evitar a lesão por pressão" className="mx-auto mt-4 max-w-full" />
+                    <img src={comoEvitar} alt="Como evitar a lesão por pressão" className="mx-auto mt-4 max-w-full" />
                 </section>
 
                 <section id="sinais" className="scroll-mt-24 border-2 border-gray-200 bg-white p-6">
