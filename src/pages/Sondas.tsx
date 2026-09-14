@@ -1,5 +1,9 @@
 import PageLayout from '../components/PageLayout'
 import imagemGenerica from '../logos/imagemGenerica.png'
+// import sondaGastricaLoc from '../logos/sondaGastricaLoc.png'
+// import sondaEntericaLoc from '../logos/sondaEntericaLoc.png'
+// import sondaGastricaViaUnica from '../logos/sondaGastricaViaUnica.png'
+// import sondaEntericaDuasVias from '../logos/sondaEntericaViaDupla.png'
 
 const ImagePlaceholder = ({ label }: { label: string }) => (
 	<div className="flex min-h-40 w-full items-center justify-center border-2 border-dashed border-gray-400 bg-gray-100 p-4 text-center text-sm font-medium leading-5 text-gray-600">
