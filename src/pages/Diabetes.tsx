@@ -4,12 +4,6 @@ import comoPinçar from '../logos/comoPinçar.png'
 import comoAplicar from '../logos/comoAplicar.png'
 import locaisAplicaçao from '../logos/locaisAplicaçao.png'
 
-const ImagePlaceholder = ({ label }: { label: string }) => (
-    <div className="flex min-h-40 w-full items-center justify-center border-2 border-dashed border-gray-400 bg-gray-100 p-4 text-center font-medium text-gray-600">
-        {label}
-    </div>
-)
-
 const Diabetes = () => (
     <PageLayout
         title="Diabetes Mellitus Tipo 1 e 2"

@@ -1,6 +1,6 @@
 import PageLayout from '../components/PageLayout'
 import locaisLesoes from '../logos/locaisAparecimentoLesaoPressao.png'
-import imagemGenerica from '../logos/imagemGenerica.png'
+// import imagemGenerica from '../logos/imagemGenerica.png'
 import comoEvitar from '../logos/comoEvitarLesaoporPressao.png'
 import lesoesAparecimento from '../logos/sinaisAparecem.png'
 import lesoesAparecimento2 from '../logos/sinaisAparecem1.png'
