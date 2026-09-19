@@ -48,7 +48,7 @@ const CateterVenosoCentral = () => {
 					</ul>
 				</section>
 
-				<section className="bg-white border-2 border-l-4 border-l-red-600 border-gray-200 p-6">
+				<section className="bg-white border-2 border-gray-200 p-6">
 					<h3 className="mb-4 border-b-2 border-[#003366] pb-2 text-xl font-bold text-[#003366]">
 						Atenção!
 					</h3>
@@ -57,10 +57,10 @@ const CateterVenosoCentral = () => {
 						<li>Não quebrar;</li>
 						<li>Não sujar;</li>
 					</ul>
-					<div className="mt-4 rounded border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-800">
+					<p className="mt-4 rounded border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-800">
 						Qualquer sinal de febre, dor intensa, vermelhidão ou vazamento deve ser
 						comunicado imediatamente à equipe de saúde.
-					</div>
+					</p>
 				</section>
 
 				<section

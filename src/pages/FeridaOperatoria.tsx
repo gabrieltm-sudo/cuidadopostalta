@@ -56,7 +56,7 @@ const FeridaOperatoria = () => {
                     </ul>
                 </section>
 
-                <section id="alerta" className="scroll-mt-24 border-2 border-l-4 border-l-red-600 border-gray-200 bg-white p-6">
+                <section id="alerta" className="scroll-mt-24 border-2 border-gray-200 bg-white p-6 md:col-span-2">
                     <h3 className="mb-4 border-b-2 border-[#003366] pb-2 text-xl font-bold text-[#003366]">
                         Quando procurar ajuda
                     </h3>
@@ -67,9 +67,9 @@ const FeridaOperatoria = () => {
                         <li>Dor intensa ou piora da dor;</li>
                         <li>Ferida aberta, com bordas separadas ou com saída de líquidos anormais.</li>
                     </ul>
-                    <div className="mt-5 rounded border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-800">
+                    <p className="mt-5 rounded border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-800">
                         Caso apareçam sinais de infecção ou complicação, procure o serviço de saúde imediatamente.
-                    </div>
+                    </p>
                 </section>
             </div>
         </PageLayout>

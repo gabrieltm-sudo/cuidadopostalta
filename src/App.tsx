@@ -1,6 +1,6 @@
 import { BrowserRouter  as Router, Routes, Route } from 'react-router-dom'
 
-import Header from './pages/Header.tsx'
+import Header from './components/Header.tsx'
 import Menu from './components/Menu.tsx'
 import FontButtons from './components/acessibilityFontButtons.tsx'
 

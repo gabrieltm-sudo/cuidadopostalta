@@ -1,11 +1,13 @@
 import PageLayout from '../components/PageLayout'
+import ImageFocus from '../components/ImageFocus'
 import CarouselImages from '../components/CarouselImages'
-import tiposBolsas from '../images/tiposBolsas.png'
-import tiposBolsas1 from '../images/tiposBolsas1.png'
-import colonAsc from '../images/colonAscendente.png'
-import colonDesc from '../images/colonDescendente.png'
-import colonTrans from '../images/colonTransverso.png'
-import colonSig from '../images/colonSigmoide.png'
+
+import tiposBolsas from '../images/Estomias/tiposBolsas.png'
+import tiposBolsas1 from '../images/Estomias/tiposBolsas1.png'
+import colonAsc from '../images/Estomias/colonAscendente.png'
+import colonDesc from '../images/Estomias/colonDescendente.png'
+import colonTrans from '../images/Estomias/colonTransverso.png'
+import colonSig from '../images/Estomias/colonSigmoide.png'
 
 const Estomias = () => {
 	const tocItems = [
@@ -103,10 +105,9 @@ const colostomias = [
 				<section className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white border-2 border-gray-200 p-6 md:col-span-2">
 					{colostomias.map((colostomia) => (
 						<div key={colostomia.id} className="text-center mb-6">
-							<img
+							<ImageFocus
 								src={colostomia.image}
 								alt={colostomia.alt}
-								draggable={false}
 								className="mx-auto max-w-full mb-4"
 							/>
 							<p className="text-base leading-7">
