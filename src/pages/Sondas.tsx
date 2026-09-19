@@ -1,15 +1,26 @@
 import PageLayout from '../components/PageLayout'
+import CarouselImages from '../components/CarouselImages'
 import imagemGenerica from '../logos/imagemGenerica.png'
-// import sondaGastricaLoc from '../logos/sondaGastricaLoc.png'
-// import sondaEntericaLoc from '../logos/sondaEntericaLoc.png'
-// import sondaGastricaViaUnica from '../logos/sondaGastricaViaUnica.png'
-// import sondaEntericaDuasVias from '../logos/sondaEntericaViaDupla.png'
+import sondaGastricaLoc from '../logos/sondaGastricaLoc.png'
+import sondaEntericaLoc from '../logos/sondaEntericaLoc.png'
+import sondaGastricaViaUnica from '../logos/sondaGastricaViaUnica.png'
+import sondaEntericaDuasVias from '../logos/sondaEntericaViaDupla.png'
 
 const ImagePlaceholder = ({ label }: { label: string }) => (
 	<div className="flex min-h-40 w-full items-center justify-center border-2 border-dashed border-gray-400 bg-gray-100 p-4 text-center text-sm font-medium leading-5 text-gray-600">
 		{label}
 	</div>
 )
+
+const sondaGastrica = [
+  { id: 1, image: sondaGastricaLoc, text: 'Localização da Sonda Gástrica (Via única)' },
+  { id: 2, image: sondaGastricaViaUnica, text: 'Via única' },
+];
+
+const sondaEnterica = [
+	{ id: 1, image: sondaEntericaLoc, text: 'Localização da Sonda Entérica (Duas vias)' },
+	{ id: 2, image: sondaEntericaDuasVias, text: 'Via única' },
+]
 
 const Sondas = () => {
 	const tocItems = [
@@ -38,7 +49,7 @@ const Sondas = () => {
 						Possui uma via de administração para medicamentos e dieta.
 					</p>
 					<div className="mt-5">
-						<ImagePlaceholder label="Localização da Sonda Gástrica (Via única)" />
+						<CarouselImages steps={sondaGastrica} />
 					</div>
 				</section>
 
@@ -54,7 +65,7 @@ const Sondas = () => {
 						medicação.
 					</p>
 					<div className="mt-5">
-						<ImagePlaceholder label="Localização da Sonda Entérica (Duas vias)" />
+						<CarouselImages steps={sondaEnterica} />
 					</div>
 				</section>
 
