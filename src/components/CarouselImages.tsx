@@ -1,36 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-interface Step {
+interface CarouselImage {
   id: number;
   image: string;
+  alt: string;
   text: string;
 }
 
 interface StepCarouselProps {
-  steps: Step[];
+  steps: CarouselImage[];
 }
 
-{/* Uso das setas do teclado para navegar entre as imagems do carrosel */}
 const StepCarousel = ({ steps }: StepCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if(event.key === 'ArrowLeft'){
-        prevSlide();
-      }
-
-      if(event.key === 'ArrowRight'){
-        nextSlide();
-      }
-    }
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    }
-  }, [currentIndex, steps.length]);
 
   if (!steps || steps.length === 0) return null;
 
@@ -46,6 +29,34 @@ const StepCarousel = ({ steps }: StepCarouselProps) => {
     setCurrentIndex(index);
   };
 
+  const touchStart = useRef({x: 0, y: 0});
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    touchStart.current = {
+      x: e.clientX,
+      y: e.clientY,
+    };
+  };
+
+  const handlePointerUp = (e: React.PointerEvent) => {
+    const deltaX = e.clientX - touchStart.current.x;
+    const deltaY = e.clientY - touchStart.current.y;
+
+    const minSwipeDistance = 50; // Distância mínima de um swape
+    
+    if(
+      Math.abs(deltaX) > minSwipeDistance &&
+      Math.abs(deltaX) > Math.abs(deltaY)
+    ){
+      if(deltaX < 0){
+        nextSlide();
+      }
+      else{
+        prevSlide();
+      }
+    }
+  }
+  
   return (
     <div className="relative flex flex-col border-2 border-gray-200 bg-gray-50">
       
@@ -68,7 +79,7 @@ const StepCarousel = ({ steps }: StepCarouselProps) => {
         </div>
 
         {/* Imagem */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 touch-pan-y overflow-hidden" onPointerDown={handlePointerDown} onPointerUp={handlePointerUp} onPointerCancel={() => touchStart.current ={x: 0, y: 0}}>
           <div 
             className="flex h-full transition-transform duration-700 ease-out" 
             style={{width: `${steps.length*100}%`, transform: `translateX(-${currentIndex*(100/steps.length)}%)`,}}
@@ -79,7 +90,7 @@ const StepCarousel = ({ steps }: StepCarouselProps) => {
                 style={{width: `${100/steps.length}%`}}
               >
                 {step.image ? (
-                  <img src={step.image} alt={`Ilustração do passo ${step.id}`} className="h-full w-full object-contain"/>
+                  <img src={step.image} alt={step.alt} draggable={false} className="h-full w-full object-contain"/>
                 ) : (
                   <div className="text-center font-bold text-gray-400">
                     [Imagem: {step.id}]

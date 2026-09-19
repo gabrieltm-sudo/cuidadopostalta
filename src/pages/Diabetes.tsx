@@ -1,8 +1,8 @@
 import PageLayout from '../components/PageLayout'
-import imagemGenerica from '../logos/diabeteImagem.png'
-import comoPinçar from '../logos/comoPinçar.png'
-import comoAplicar from '../logos/comoAplicar.png'
-import locaisAplicaçao from '../logos/locaisAplicaçao.png'
+import imagemGenerica from '../images/Diabetes/diabeteImagem.png'
+import comoPinçar from '../images/Diabetes/comoPinçar.png'
+import comoAplicar from '../images/Diabetes/comoAplicar.png'
+import locaisAplicaçao from '../images/Diabetes/locaisAplicaçao.png'
 
 const Diabetes = () => (
     <PageLayout

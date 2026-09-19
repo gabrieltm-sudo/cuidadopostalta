@@ -1,10 +1,11 @@
 import PageLayout from '../components/PageLayout'
 import CarouselImages from '../components/CarouselImages'
-import imagemGenerica from '../logos/imagemGenerica.png'
-import sondaGastricaLoc from '../logos/sondaGastricaLoc.png'
-import sondaEntericaLoc from '../logos/sondaEntericaLoc.png'
-import sondaGastricaViaUnica from '../logos/sondaGastricaViaUnica.png'
-import sondaEntericaDuasVias from '../logos/sondaEntericaViaDupla.png'
+
+import imagemGenerica from '../images/Sondas/imagemGenerica.png'
+import sondaGastricaLoc from '../images/Sondas/sondaGastricaLoc.png'
+import sondaEntericaLoc from '../images/Sondas/sondaEntericaLoc.png'
+import sondaGastricaViaUnica from '../images/Sondas/sondaGastricaViaUnica.png'
+import sondaEntericaDuasVias from '../images/Sondas/sondaEntericaViaDupla.png'
 
 const ImagePlaceholder = ({ label }: { label: string }) => (
 	<div className="flex min-h-40 w-full items-center justify-center border-2 border-dashed border-gray-400 bg-gray-100 p-4 text-center text-sm font-medium leading-5 text-gray-600">
@@ -13,13 +14,13 @@ const ImagePlaceholder = ({ label }: { label: string }) => (
 )
 
 const sondaGastrica = [
-  { id: 1, image: sondaGastricaLoc, text: 'Localização da Sonda Gástrica (Via única)' },
-  { id: 2, image: sondaGastricaViaUnica, text: 'Via única' },
+  { id: 1, image: sondaGastricaLoc, text: 'Localização da Sonda Gástrica (Via única)', alt: 'Imagem ilustrativa mostrando a localização da sonda gástrica' },
+  { id: 2, image: sondaGastricaViaUnica, text: 'Via única', alt: 'Imagem ilustrativa mostrando a sonda gástrica de via única' },
 ];
 
 const sondaEnterica = [
-	{ id: 1, image: sondaEntericaLoc, text: 'Localização da Sonda Entérica (Duas vias)' },
-	{ id: 2, image: sondaEntericaDuasVias, text: 'Via única' },
+	{ id: 1, image: sondaEntericaLoc, text: 'Localização da Sonda Entérica (Duas vias)', alt: 'Imagem ilustrativa mostrando a localização da sonda entérica' },
+	{ id: 2, image: sondaEntericaDuasVias, text: 'Via única', alt: 'Imagem ilustrativa mostrando a sonda entérica de duas vias' },
 ]
 
 const Sondas = () => {

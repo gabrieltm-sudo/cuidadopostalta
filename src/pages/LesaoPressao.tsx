@@ -1,9 +1,9 @@
 import PageLayout from '../components/PageLayout'
-import locaisLesoes from '../logos/locaisAparecimentoLesaoPressao.png'
-// import imagemGenerica from '../logos/imagemGenerica.png'
-import comoEvitar from '../logos/comoEvitarLesaoporPressao.png'
-import lesoesAparecimento from '../logos/sinaisAparecem.png'
-import lesoesAparecimento2 from '../logos/sinaisAparecem1.png'
+import locaisLesoes from '../images/locaisAparecimentoLesaoPressao.png'
+// import imagemGenerica from '../images/imagemGenerica.png'
+import comoEvitar from '../images/LessaoPorPressao/comoEvitarLesaoporPressao.png'
+import lesoesAparecimento from '../images/LessaoPorPressao/sinaisAparecem.png'
+import lesoesAparecimento2 from '../images/LessaoPorPressao/sinaisAparecem1.png'
 
 const LesaoPorPressao = () => {
     const tocItems = [
