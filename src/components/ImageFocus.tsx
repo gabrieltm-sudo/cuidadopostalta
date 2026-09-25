@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { X } from 'lucide-react';
 
 interface ImageFocusProps{
     src: string;
@@ -42,9 +43,16 @@ const ImageFocus: React.FC<ImageFocusProps> = ({src, alt, className = ''}) => {
 
              {isFocused && (
                 <>
-                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm transition-opacity">
-                        <button onClick={() => setIsFocused(false)}>
-                            &times
+                    <div onClick={() => setIsFocused(false)}
+                        className="fixed inset-0 z-50 flex items-center justify-center bg-gray-400/50 backdrop-blur-sm transition-opacity"
+                    >
+                        <button onClick={(e) => { e.stopPropagation(); 
+                                                setIsFocused(false)
+                                }}
+                                className="absolute top-4 right-4 text-white text-4xl cursor-pointer hover:text-gray-300 transition-colors"
+                                aria-label="Fechar imagem ampliada"
+                        >
+                            <X size={32} />
                         </button>
                         <img
                             src={src}

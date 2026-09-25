@@ -23,10 +23,7 @@ const Traqueostomia = () => {
                         O que é a traqueostomia?
                     </h3>
                     <p className="text-base leading-7 text-gray-700">
-                        A traqueostomia é a abertura cirúrgica na parte anterior do pescoço,
-                        feita para facilitar a passagem de ar até os pulmões quando a via
-                        aérea superior está obstruída, lesionada ou quando há necessidade de
-                        auxílio respiratório por um período mais prolongado.
+                        É um procedimento cirúrgico que cria uma abertura (estoma) na parte frontal do pescoço, diretamente na traqueia. Um tubo ou cânula é inserido nessa abertura para permitir a passagem de ar e facilitando a respiração.
                     </p>
                     <p className="mt-4 text-base leading-7 text-gray-700">
                         É um dispositivo importante para a respiração, mas exige atenção
@@ -60,7 +57,7 @@ const Traqueostomia = () => {
                     </ul>
                 </section>
 
-                <section id="alerta" className="scroll-mt-24 border-2 border-l-4 border-l-red-600 border-gray-200 bg-white p-6">
+                <section id="alerta" className="scroll-mt-24 border-2 border-gray-200 bg-white p-6 md:col-span-2">
                     <h3 className="mb-4 border-b-2 border-[#003366] pb-2 text-xl font-bold text-[#003366]">
                         Sinais de alerta
                     </h3>

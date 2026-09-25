@@ -56,7 +56,7 @@ const Hipertensao = () => {
                     </p>
                 </section>
 
-                <section id="diagnostico" className="scroll-mt-24 bg-white border-2 border-gray-200 p-6">
+                <section id="diagnostico" className="scroll-mt-24 bg-white border-2 border-gray-200 p-6 md:col-span-2">
                     <h3 className="mb-4 border-b-2 border-[#003366] pb-2 text-xl font-bold text-[#003366]">
                         Diagnóstico
                     </h3>
@@ -78,10 +78,10 @@ const Hipertensao = () => {
                         <li>Controlar o peso, o estresse e a qualidade do sono;</li>
                         <li>Tomar os medicamentos conforme prescrição e medir a pressão regularmente.</li>
                     </ul>
-                    <div className="mt-5 rounded border border-blue-200 bg-blue-50 p-4 text-sm font-medium text-blue-800">
+                    <p className="mt-5 rounded border border-blue-200 bg-blue-50 p-4 text-sm font-medium text-blue-800">
                         Acompanhar o tratamento com o profissional de saúde é essencial para evitar
                         complicações e manter a pressão em níveis adequados.
-                    </div>
+                    </p>
                 </section>
             </div>
         </PageLayout>

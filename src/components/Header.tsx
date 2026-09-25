@@ -1,5 +1,5 @@
-import UnipampaLogo from "../logos/UNIPAMPA_Logo_100.png"
-import Tec1Logo from "../logos/Logo_Tec1_200.png"
+import UnipampaLogo from "../images/Logos/UNIPAMPA_Logo_100.png"
+import Tec1Logo from "../images/Logos/Logo_Tec1_200.png"
 
 const Header = () => {
     return (

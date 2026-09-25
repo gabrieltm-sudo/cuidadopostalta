@@ -1,8 +1,9 @@
 import PageLayout from '../components/PageLayout'
-import imagemGenerica from '../logos/diabeteImagem.png'
-import comoPinçar from '../logos/comoPinçar.png'
-import comoAplicar from '../logos/comoAplicar.png'
-import locaisAplicaçao from '../logos/locaisAplicaçao.png'
+import ImageFocus from '../components/ImageFocus'
+import imagemGenerica from '../images/Diabetes/diabeteImagem.png'
+import comoPinçar from '../images/Diabetes/comoPinçar.png'
+import comoAplicar from '../images/Diabetes/comoAplicar.png'
+import locaisAplicaçao from '../images/Diabetes/locaisAplicaçao.png'
 
 const Diabetes = () => (
     <PageLayout
@@ -51,7 +52,7 @@ const Diabetes = () => (
                             </div>
                         </div>
                     </div>
-                    <img src={imagemGenerica} alt="Ilustração sobre diabetes" className="mx-auto max-w-full" />
+                    <ImageFocus src={imagemGenerica} alt="Ilustração sobre diabetes" className="mx-auto max-w-full" />
                 </div>
             </section>
 
@@ -128,8 +129,8 @@ const Diabetes = () => (
                     </div>
 
                     <div className="flex flex-col gap-4 justify-center">
-                        <img src={comoPinçar} alt="Ilustração de como pinçar a pele para aplicação da insulina" className="mx-auto max-w-full" />
-                        <img src={comoAplicar} alt="Ilustração: Ângulos de aplicação da agulha na pele (90º e 45º)" className="mx-auto max-w-full" />
+                        <ImageFocus src={comoPinçar} alt="Ilustração de como pinçar a pele para aplicação da insulina" className="mx-auto max-w-full" />
+                        <ImageFocus src={comoAplicar} alt="Ilustração: Ângulos de aplicação da agulha na pele (90º e 45º)" className="mx-auto max-w-full" />
                     </div>
                 </div>
             </section>
@@ -192,7 +193,7 @@ const Diabetes = () => (
                     <p className="text-base leading-7 text-gray-700 sm:text-lg">
                         O local de aplicação deve estar limpo e seco, realizando o rodízio dos pontos de aplicação.
                     </p>
-                    <img src={locaisAplicaçao} alt="Ilustração de locais para aplicação da insulina" className="mx-auto max-w-full" />
+                    <ImageFocus src={locaisAplicaçao} alt="Ilustração de locais para aplicação da insulina" className="mx-auto max-w-full" />
                 </div>
             </section>
             

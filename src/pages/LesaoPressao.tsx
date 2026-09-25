@@ -1,9 +1,10 @@
 import PageLayout from '../components/PageLayout'
-import locaisLesoes from '../logos/locaisAparecimentoLesaoPressao.png'
-// import imagemGenerica from '../logos/imagemGenerica.png'
-import comoEvitar from '../logos/comoEvitarLesaoporPressao.png'
-import lesoesAparecimento from '../logos/sinaisAparecem.png'
-import lesoesAparecimento2 from '../logos/sinaisAparecem1.png'
+import ImageFocus from '../components/ImageFocus'
+// import imagemGenerica from '../images/imagemGenerica.png'
+import locaisLesoes from '../images/LessaoPorPressao/locaisAparecimentoLesaoPressao.png'
+import comoEvitar from '../images/LessaoPorPressao/comoEvitarLesaoporPressao.png'
+import lesoesAparecimento from '../images/LessaoPorPressao/sinaisAparecem.png'
+import lesoesAparecimento2 from '../images/LessaoPorPressao/sinaisAparecem1.png'
 
 const LesaoPorPressao = () => {
     const tocItems = [
@@ -32,7 +33,7 @@ const LesaoPorPressao = () => {
                     <h2 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">
                         Como evitar?
                     </h2>
-                    <img src={comoEvitar} alt="Como evitar a lesão por pressão" className="mx-auto mt-4 max-w-full" />
+                    <ImageFocus src={comoEvitar} alt="Como evitar a lesão por pressão" className="mx-auto mt-4 max-w-full" />
                 </section>
 
                 <section id="sinais" className="scroll-mt-24 border-2 border-gray-200 bg-white p-6">
@@ -50,7 +51,7 @@ const LesaoPorPressao = () => {
                     <h2 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">
                         Principais locais de aparecimento da lesão
                     </h2>
-                    <img src={locaisLesoes} alt="Locais de aparição da lesão por pressão" className="mx-auto mt-4 max-w-full" />
+                    <ImageFocus src={locaisLesoes} alt="Locais de aparição da lesão por pressão" className="mx-auto mt-4 max-w-full" />
                 </section>
 
                 <section id="o-que-fazer" className="scroll-mt-24 border-2 border-gray-200 bg-white p-6 md:col-span-2">
@@ -69,8 +70,8 @@ const LesaoPorPressao = () => {
                         família do seu bairro.
                     </div>
                     <div className="mt-4 space-y-4">
-                        <img src={lesoesAparecimento} alt="Imagem ilustrativa do que fazer quando os sinais aparecerem" className="mx-auto max-w-full" />
-                        <img src={lesoesAparecimento2} alt="Imagem ilustrativa do que fazer quando os sinais aparecerem" className="mx-auto max-w-full" />
+                        <ImageFocus src={lesoesAparecimento} alt="Imagem ilustrativa do que fazer quando os sinais aparecerem" className="mx-auto max-w-full" />
+                        <ImageFocus src={lesoesAparecimento2} alt="Imagem ilustrativa do que fazer quando os sinais aparecerem" className="mx-auto max-w-full" />
                     </div>
                 </section>
             </div>
