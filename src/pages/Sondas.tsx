@@ -1,5 +1,6 @@
 import PageLayout from '../components/PageLayout'
 import CarouselImages from '../components/CarouselImages'
+import ImageFocus from '../components/ImageFocus'
 
 import imagemGenerica from '../images/Sondas/imagemGenerica.png'
 import sondaGastricaLoc from '../images/Sondas/sondaGastricaLoc.png'
@@ -226,7 +227,7 @@ const Sondas = () => {
 						Observação: Esteja atento a sinais de infecção, irritação ou outros
 						problemas, como sangramento ou dor durante o procedimento. Relate
 						qualquer problema ao profissional de saúde mais próximo.
-						<img src={imagemGenerica} alt={"Imagem de alerta sobre sinais de infecção"} className={"mx-auto max-w-full h-80"} />
+						<ImageFocus src={imagemGenerica} alt="Imagem de alerta sobre sinais de infecção" className="mx-auto max-w-full h-80" />
 					</div>
 				</section>
 			</div>
