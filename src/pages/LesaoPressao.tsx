@@ -33,6 +33,12 @@ const LesaoPorPressao = () => {
                         Como evitar?
                     </h2>
                     <img src={comoEvitar} alt="Como evitar a lesão por pressão" className="mx-auto mt-4 max-w-full" />
+                    <ul className="list-disc space-y-2 pl-5 text-base leading-7">
+                        <li>Mudar a posição da pessoa a cada 2 horas;</li>
+                        <li>A cada mudança, é importante que a pessoa seja levantada e não arrastada;</li>
+                        <li>Os lençois devem estar bem espichados;</li>
+                        <li>Pode usar almofadas e travesseiros para auxiliar no posicionamento correto.</li>
+                    </ul>
                 </section>
 
                 <section id="sinais" className="scroll-mt-24 border-2 border-gray-200 bg-white p-6">
@@ -42,6 +48,8 @@ const LesaoPorPressao = () => {
                     <ul className="list-disc space-y-2 pl-5 text-base leading-7">
                         <li>Vermelhidão na pele;</li>
                         <li>Bolhas;</li>
+                        <li>Dor;</li>
+                        <li>Alteração na sensibilidade;</li>
                         <li>Escurecimento da pele - cor arroxeada ou preta.</li>
                     </ul>
                 </section>
@@ -65,8 +73,8 @@ const LesaoPorPressao = () => {
                     </p>
                     <div className="mt-4 border border-red-200 bg-red-50 p-4 font-medium text-red-800">
                         Importante: Se houver dúvidas ou outras alterações na pele, deve-se
-                        entrar em contato com os profissionais da Estratégia de saúde da
-                        família do seu bairro.
+                        entrar em contato com os profissionais da Estratégia de Saúde da
+                        Família (Postinho) do seu bairro.
                     </div>
                     <div className="mt-4 space-y-4">
                         <img src={lesoesAparecimento} alt="Imagem ilustrativa do que fazer quando os sinais aparecerem" className="mx-auto max-w-full" />
