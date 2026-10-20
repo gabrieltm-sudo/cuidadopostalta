@@ -23,7 +23,7 @@ const FeridaOperatoria = () => {
                         O que é a ferida operatória?
                     </h3>
                     <p className="text-base leading-7 text-gray-700">
-                        Ferida operatória é a incisã o ou abertura realizada durante uma cirurgia,
+                        Ferida operatória é a incisão ou abertura realizada durante uma cirurgia,
                         que precisa ser protegida e observada para permitir cicatrização adequada.
                         A limpeza correta, a observação do local e a avaliação de sinais de infecção
                         ajudam a evitar complicações.
