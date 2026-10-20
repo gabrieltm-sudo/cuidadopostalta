@@ -1,5 +1,6 @@
 import CarouselImages from '../components/CarouselImages'
 import PageLayout from '../components/PageLayout'
+import ImageFocus from '../components/ImageFocus'
 
 import drenoImage from '../images/Drenos/dreno.png'
 import limpezaCurativo from '../images/Drenos/DrenoLimpeza/limpezaCurativo.png'
@@ -53,7 +54,7 @@ const Drenos = () => {
 							<li>Manipulação asséptica (limpa);</li>
 							<li>Sempre feche o clampe no manuseio.</li>
 						</ul>
-						<img src={drenoImage} alt="Dreno Suctor/Portovac" className="mx-auto max-w-full" />
+						<ImageFocus src={drenoImage} alt="Dreno Suctor/Portovac" className="mx-auto max-w-full" />
 					</div>
 
 					<p className="text-justify mt-4 text-lg">
@@ -91,7 +92,7 @@ const Drenos = () => {
 						</li>
 					</ul>
 					{/* TODO: Modificar imagem para uma melhor */}
-					<img src={limpezaCurativo} alt="Forma de limpar curativo" className="mx-auto max-w-full"
+					<ImageFocus src={limpezaCurativo} alt="Forma de limpar curativo" className="mx-auto max-w-full"
 					/>
 				</section>
 
@@ -194,7 +195,7 @@ const Drenos = () => {
 							Sentido da limpeza: inicia-se pelo local de inserção do dreno até a região ao redor da inserção (proximal-distal).
 						</li>
 					</ul>
-					<img src={limpezaCurativo} alt="Forma de limpar curativo" className="mx-auto max-w-full"
+					<ImageFocus src={limpezaCurativo} alt="Forma de limpar curativo" className="mx-auto max-w-full"
 					/>
 				</section>
 
