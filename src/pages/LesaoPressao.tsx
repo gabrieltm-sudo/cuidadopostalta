@@ -1,10 +1,15 @@
+import { useState } from 'react'
+
 import PageLayout from '../components/PageLayout'
 import ImageFocus from '../components/ImageFocus'
+import ReferenceModal from '../components/ReferenceModal'
 // import imagemGenerica from '../images/imagemGenerica.png'
+
 import locaisLesoes from '../images/LessaoPorPressao/locaisAparecimentoLesaoPressao.png'
 import comoEvitar from '../images/LessaoPorPressao/comoEvitarLesaoporPressao.png'
 import lesoesAparecimento from '../images/LessaoPorPressao/sinaisAparecem.png'
 import lesoesAparecimento2 from '../images/LessaoPorPressao/sinaisAparecem1.png'
+import { BookOpen } from 'lucide-react'
 
 const LesaoPorPressao = () => {
     const tocItems = [
@@ -13,6 +18,12 @@ const LesaoPorPressao = () => {
         { id: 'sinais', label: 'Quais os sinais?' },
         { id: 'locais', label: 'Principais locais' },
         { id: 'o-que-fazer', label: 'O que fazer?' },
+    ]
+
+    const [isRefModalOpen, setIsRefModalOpen] = useState(false);
+    const references = [
+        "EUROPEAN PRESSURE ULCER ADVISORY PANEL (EPUAP); NATIONAL PRESSURE INJURY ADVISORY PANEL (NPIAP); PAN PACIFIC PRESSURE INJURY ALLIANCE (PPPIA). The International Pressure Ulcer/Injury Clinical Practice Guideline. 4. ed. 2026. Disponível em: https://epuap.org/pu-guidelines/",
+        "BRASIL. Ministério da Saúde; AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA (ANVISA); FUNDAÇÃO OSWALDO CRUZ (FIOCRUZ). Protocolo para prevenção de úlcera por pressão. Brasília, DF: Ministério da Saúde, 2013. Disponível em: https://bibliotecadigital.anvisa.gov.br/jspui/handle/anvisa/1775"
     ]
 
     return (
@@ -82,7 +93,24 @@ const LesaoPorPressao = () => {
                         <ImageFocus src={lesoesAparecimento2} alt="Imagem ilustrativa do que fazer quando os sinais aparecerem" className="mx-auto max-w-full" />
                     </div>
                 </section>
+
+                <div className="flex items-center justify-center pt-2 md:col-span-2">
+                    <button
+                        onClick={() => setIsRefModalOpen(true)}
+                        className="inline-flex min-h-11 cursor-pointer items-center gap-2 border-2 border-[#003366] bg-white px-6 py-2 font-bold text-[#003366] transition-colors duration-200 hover:bg-[#003366] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#003366]"
+                    >
+                        <BookOpen size={20} aria-hidden="true" />
+                        Ver Referências
+                    </button>
+                </div>
+
+                <ReferenceModal
+                    isOpen={isRefModalOpen}
+                    onClose={() => setIsRefModalOpen(false)}
+                    references={references}
+                />
             </div>
+
         </PageLayout>
     )
 }

@@ -71,6 +71,10 @@ const Sondas = () => {
 					</div>
 				</section>
 
+				<p className="mt-4 rounded border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-800 col-span-2">
+					Deve ser utilizado apenas a dieta prescrita, não sendo permitido o uso de outros alimentos, como leite, sucos, vitaminas, sopas, etc.
+				</p>
+				
 				<section className="bg-white border-2 border-gray-200 p-6 text-base leading-7 md:col-span-2">
 					<h3 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">
 						Cuidados com a administração de dieta
