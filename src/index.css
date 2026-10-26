@@ -3,3 +3,9 @@
 html {
 	scroll-behavior: smooth;
 }
+
+@layer base {
+  p {
+    @apply text-left text-pretty;
+  }
+}

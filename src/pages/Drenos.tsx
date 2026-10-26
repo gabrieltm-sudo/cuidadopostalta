@@ -44,6 +44,9 @@ const Drenos = () => {
 
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<section className="bg-red border-2 border-gray-200 p-6 md:col-span-2">
+					<p className="mt-4 rounded border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-800 col-span-2">
+						Não deve ser elevado acima do nível do coração(?), pois o ...
+					</p>
 					<h3 className="text-[#003366] text-xl font-bold mb-4 border-b-2 border-[#003366] pb-2">
 						O que é e Finalidade
 					</h3>
