@@ -22,6 +22,7 @@ const LesaoPorPressao = () => {
 
     const [isRefModalOpen, setIsRefModalOpen] = useState(false);
     const references = [
+        "BRASPEN JOURNAL- Brazilian Society of Parenteral and Enteral Nutrition. Campanha Diga não a Lesão por Pressão. São Paulo: Braspen, 2020. ISSN 2525-7374. 35 (Supl 1) Disponível em: http://www.braspen.org/braspen-journal Acesso em: 20 set. 2024.",
         "EUROPEAN PRESSURE ULCER ADVISORY PANEL (EPUAP); NATIONAL PRESSURE INJURY ADVISORY PANEL (NPIAP); PAN PACIFIC PRESSURE INJURY ALLIANCE (PPPIA). The International Pressure Ulcer/Injury Clinical Practice Guideline. 4. ed. 2026. Disponível em: https://epuap.org/pu-guidelines/",
         "BRASIL. Ministério da Saúde; AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA (ANVISA); FUNDAÇÃO OSWALDO CRUZ (FIOCRUZ). Protocolo para prevenção de úlcera por pressão. Brasília, DF: Ministério da Saúde, 2013. Disponível em: https://bibliotecadigital.anvisa.gov.br/jspui/handle/anvisa/1775"
     ]

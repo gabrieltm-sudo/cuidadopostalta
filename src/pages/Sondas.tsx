@@ -1,6 +1,10 @@
+import { useState } from 'react'
 import PageLayout from '../components/PageLayout'
 import CarouselImages from '../components/CarouselImages'
 import ImageFocus from '../components/ImageFocus'
+
+import ReferenceModal from '../components/ReferenceModal'
+import { BookOpen } from 'lucide-react'
 
 import imagemGenerica from '../images/Sondas/imagemGenerica.png'
 import sondaGastricaLoc from '../images/Sondas/sondaGastricaLoc.png'
@@ -29,6 +33,18 @@ const Sondas = () => {
 		{ id: 'enteral', label: 'Sonda Enteral' },
 		{ id: 'vesical-alivio', label: 'Vesical de Alívio' },
 		{ id: 'vesical-demora', label: 'Vesical de Demora' },
+	]
+
+	const [isRefModalOpen, setIsRefModalOpen] = useState(false);
+	const references = [
+		"Sondas, Catéteres e Drenos – Quero Instrumentar FMRP-USP https://share.google/RGsrWN80tChVmguPs",
+		"Tipos de drenos cirúrgicos e cuidados da enfermagem | Artmed https://share.google/2W57m991VrcUBbha3",
+		"ARAÚJO, I. S.; et al.Guia multiprofissional de orientação para pacientes em uso de nutrição enteral domiciliar. Petrolina: HEWAB, 2017. Disponível em: https://nutritotal.com.br/pro/wp-content/uploads/2019/03/Guia_Nutri%C3%A7%C3%A3o_Enteral.pdf",
+		"BRASIL. Ministério da Saúde. Mantenha seu sorriso fazendo a higiene bucal corretamente. Brasília, 2012. Disponível em: https://bvsms.saude.gov.br/bvs/publicacoes/mantenha_sorriso_fazendo_higiene_bucal.pdf - Link Quebrado (?)",
+		"Brasil. Ministério da Saúde. Manual de terapia nutricional na atenção especializada hospitalar no âmbito do Sistema Único de Saúde – SUS [recurso eletrônico]. Brasília: Ministério da Saúde, 2016. Disponível em: https://bvsms.saude.gov.br/bvs/publicacoes/manual_terapia_nutricional_atencao_especializada.pdf",
+		"MARQUIORE, L. F; et al. Programa de assistência odontológica a pacientes de transplante da UFMG: orientações de higine bucal e cuidados. Maria Elisa de Souza e Silva - Belo Horizonte: Faculdade de Odontologia, 2021. Disponível em: https://www.odonto.ufmg.br/ecv-odr/wp-content/uploads/sites/23/2021/05/PAOPT-Cartilha-ISBN.pdf",
+		"POTTER, Patricia; PERRY, Anne Griffin. Fundamentos da Enfermagem. Rio de Janeiro: Elsevier, 2013.",
+		"SOCIEDADE BRASILEIRA DE UROLOGIA (SBU). Recomendações SBU 2016. Cateterismo Vesical. Intermitente. 2016. Disponível em: https://portaldaurologia.org.br/medicos/wp-content/uploads/2016/11/Recomenda%C3%A7%C3%B5es_Cateterismo-Vesical-SBU-2016_final.pdf",
 	]
 
 	return (
@@ -309,6 +325,22 @@ const Sondas = () => {
 						</li>
 					</ul>
 				</section>
+				
+				<div className="flex items-center justify-center pt-2 md:col-span-2">
+                        <button
+                            onClick={() => setIsRefModalOpen(true)}
+                            className="inline-flex min-h-11 cursor-pointer items-center gap-2 border-2 border-[#003366] bg-white px-6 py-2 font-bold text-[#003366] transition-colors duration-200 hover:bg-[#003366] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#003366]"
+                        >
+                            <BookOpen size={20} aria-hidden="true" />
+                            Ver Referências
+                        </button>
+                    </div>
+
+                    <ReferenceModal
+                        isOpen={isRefModalOpen}
+                        onClose={() => setIsRefModalOpen(false)}
+                        references={references}
+                    />
 			</div>
 		</PageLayout>
 	)
