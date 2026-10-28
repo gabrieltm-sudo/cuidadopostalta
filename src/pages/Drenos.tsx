@@ -1,6 +1,10 @@
+import { useState }	from 'react'
 import CarouselImages from '../components/CarouselImages'
 import PageLayout from '../components/PageLayout'
 import ImageFocus from '../components/ImageFocus'
+
+import ReferenceModal from '../components/ReferenceModal'
+import { BookOpen } from 'lucide-react'
 
 import drenoImage from '../images/Drenos/dreno.png'
 import limpezaCurativo from '../images/Drenos/DrenoLimpeza/limpezaCurativo.png'
@@ -31,6 +35,15 @@ const Drenos = () => {
 	const tocItems = [
 		{ id: 'portovac', label: 'Dreno Suctor/Portovac' },
 		{ id: 'penrose', label: 'Dreno Penrose' },
+	]
+
+	const [isRefModalOpen, setIsRefModalOpen] = useState(false);
+	const references = [
+		"Sondas, Catéteres e Drenos – Quero Instrumentar FMRP-USP https://share.google/RGsrWN80tChVmguPs",
+		"Tipos de drenos cirúrgicos e cuidados da enfermagem | Artmed https://share.google/2W57m991VrcUBbha3",
+		"POTTER, P. A.; PERRY, A. G. Fundamentos de Enfermagem. 8. ed. Rio de Janeiro: Elsevier, 2013..",
+		"ANVISA. Agência Nacional de Vigilância Sanitária. Medidas de Prevenção de Infecção Relacionada à Assistência à Saúde. 2017.",
+		"EBSERH. ASSISTÊNCIA AO PACIENTE SUBMETIDO A DRENAGEM TORÁCICA. 2020 Disponível em: https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-nordeste/hu-univasf/acesso-ainformacao/normas/protocolos-institucionais/Assistnciaaopacientesubmetidoadrenagemtorcica.pdf. <- URL quebrada -> Obtida na cartilha do Canva"
 	]
 
 	return (
@@ -227,6 +240,22 @@ const Drenos = () => {
 						</li>
 					</ul>
 				</section>
+
+				<div className="flex items-center justify-center pt-2 md:col-span-2">
+                        <button
+                            onClick={() => setIsRefModalOpen(true)}
+                            className="inline-flex min-h-11 cursor-pointer items-center gap-2 border-2 border-[#003366] bg-white px-6 py-2 font-bold text-[#003366] transition-colors duration-200 hover:bg-[#003366] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#003366]"
+                        >
+                            <BookOpen size={20} aria-hidden="true" />
+                            Ver Referências
+                        </button>
+                    </div>
+
+                    <ReferenceModal
+                        isOpen={isRefModalOpen}
+                        onClose={() => setIsRefModalOpen(false)}
+                        references={references}
+                    />
 			</div>
 		</PageLayout>
 	)

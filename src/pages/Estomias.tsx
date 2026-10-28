@@ -1,6 +1,11 @@
+import { useState } from 'react'
+
 import PageLayout from '../components/PageLayout'
 import ImageFocus from '../components/ImageFocus'
 import CarouselImages from '../components/CarouselImages'
+
+import ReferenceModal from '../components/ReferenceModal'
+import { BookOpen } from 'lucide-react'
 
 import tiposBolsas from '../images/Estomias/tiposBolsas.png'
 import tiposBolsas1 from '../images/Estomias/tiposBolsas1.png'
@@ -18,17 +23,24 @@ const Estomias = () => {
 		{ id: 'direitos', label: 'Direitos' },
 	]
 
-const tiposDeBolsas = [
-  { id: 1, image: tiposBolsas, text: 'Tipos de bolsas', alt: 'Imagem ilustrativa mostrando 4 tipos de bolsas' },
-  { id: 2, image: tiposBolsas1, text: 'Tipos de bolsas', alt: 'Imagem ilustrativa mostrando 3 tipos de bolsas' },
-];
+	const tiposDeBolsas = [
+	  { id: 1, image: tiposBolsas, text: 'Tipos de bolsas', alt: 'Imagem ilustrativa mostrando 4 tipos de bolsas' },
+	  { id: 2, image: tiposBolsas1, text: 'Tipos de bolsas', alt: 'Imagem ilustrativa mostrando 3 tipos de bolsas' },
+	];
 
-const colostomias = [
-	{ id: 1, image: colonAsc, text: 'Fezes líquidas, muito corrosivas', alt: 'Imagem ilustrativa mostrando a localização da colostomia ascendente' },
-	{ id: 2, image: colonTrans, text: 'Fezes semi-líquidas, corrosivas', alt: 'Imagem ilustrativa mostrando a localização da colostomia transversa' },
-	{ id: 3, image: colonDesc, text: 'Fezes semi-sólidas, pouco corrosivas', alt: 'Imagem ilustrativa mostrando a localização da colostomia descendente' },
-	{ id: 4, image: colonSig, text: 'Fezes sólidas ou formadas, não corrosivas', alt: 'Imagem ilustrativa mostrando a localização da colostomia sigmóide' },
-]
+	const colostomias = [
+		{ id: 1, image: colonAsc, text: 'Fezes líquidas, muito corrosivas', alt: 'Imagem ilustrativa mostrando a localização da colostomia ascendente' },
+		{ id: 2, image: colonTrans, text: 'Fezes semi-líquidas, corrosivas', alt: 'Imagem ilustrativa mostrando a localização da colostomia transversa' },
+		{ id: 3, image: colonDesc, text: 'Fezes semi-sólidas, pouco corrosivas', alt: 'Imagem ilustrativa mostrando a localização da colostomia descendente' },
+		{ id: 4, image: colonSig, text: 'Fezes sólidas ou formadas, não corrosivas', alt: 'Imagem ilustrativa mostrando a localização da colostomia sigmóide' },
+	]
+	
+	const [isRefModalOpen, setIsRefModalOpen] = useState(false);
+	const references = [
+		"SOBEST - Associação Brasileira de Estomaterapia. Manual de orientação a pessoa com estomia na região Amazônica. SOBEST: Belém, 2019. Disponível em: https://sobest.com.br/wp-content/uploads/2020/10/Estomia_na_regiao_Amazonica.pdf. Acesso em: 23 set. 2024.",
+		"SOBEST- Associação Brasileira de Estomaterapia. Consenso Brasileiro de Cuidado às Pessoas Adultas com Estomias de Eliminação.  1. ed. Segmento Farma Editores: São Paulo, 2021. Disponível em: https://sobest.com.br/biblioteca/. Acesso em: 04 out. 2024.",
+		"LIMA, A. H. A. Direitos das Pessoas com Estomias: Manual de Orientações. Belém: Editora Azul, 2023. Disponível em: https://docs.bvsalud.org/biblioref/2023/10/1512054/direitos-da-pessoa-com-estomias-manual-de-orientacoes.pdf Acesso em: 23 set. 2024."
+	]
 	
 	return (
 		<PageLayout title="Cuidados com Estomias" tocItems={tocItems}>
@@ -110,7 +122,7 @@ const colostomias = [
 								alt={colostomia.alt}
 								className="mx-auto max-w-full mb-4"
 							/>
-							<p className="text-base leading-7">
+							<p className="text-base leading-7 text-center">
 								{colostomia.text}
 							</p>
 						</div>
@@ -242,6 +254,22 @@ const colostomias = [
 						</li>
 					</ol>
 				</section>
+
+				<div className="flex items-center justify-center pt-2 md:col-span-2">
+                        <button
+                            onClick={() => setIsRefModalOpen(true)}
+                            className="inline-flex min-h-11 cursor-pointer items-center gap-2 border-2 border-[#003366] bg-white px-6 py-2 font-bold text-[#003366] transition-colors duration-200 hover:bg-[#003366] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#003366]"
+                        >
+                            <BookOpen size={20} aria-hidden="true" />
+                            Ver Referências
+                        </button>
+                    </div>
+
+                    <ReferenceModal
+                        isOpen={isRefModalOpen}
+                        onClose={() => setIsRefModalOpen(false)}
+                        references={references}
+                    />
 			</div>
 		</PageLayout>
 	)

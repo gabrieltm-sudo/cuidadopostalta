@@ -1,4 +1,8 @@
+import { useState } from 'react'
 import PageLayout from '../components/PageLayout'
+
+import ReferenceModal from '../components/ReferenceModal'
+import { BookOpen } from 'lucide-react'
 
 const Traqueostomia = () => {
     const tocItems = [
@@ -8,6 +12,14 @@ const Traqueostomia = () => {
         { id: 'alerta', label: 'Sinais de alerta' },
     ]
 
+    const [isRefModalOpen, setIsRefModalOpen] = useState(false);
+    const references = [
+        "pes_019_-_traqueostomia_orientações_para_pacientes_e_familiares_rev2_2025-maio_pub.pdf https://share.google/t2BNevsV9hnhnlSql",
+        "NATIONAL HEALTH SERVICE (NHS). Tracheostomy. [S. l.]: NHS, [s. d.]. Disponível em: https://www.nhs.uk/tests-and-treatments/tracheostomy/. Acesso em: 9 out. 2026.",
+        "HOSPITAL REGIONAL DE PIRACICABA. Traqueostomia. Piracicaba: Hospital Regional de Piracicaba, [s. d.]. Disponível em: https://www.hrp.unicamp.br/wp-content/uploads/2022/01/traqueostomia.pdf. Acesso em: 9 out. 2026.",
+        "SOBEST. Cuidados essenciais à pessoas com traqueostomia.  Associação Brasileira de Estomaterapia: 2023. Disponível em: https://sobest.com.br/cuidados-essenciais-as-pessoas-com-traqueostomia/. Acesso em: 26 set. 2024."
+    ]
+    
     return (
         <PageLayout title="Traqueostomia" tocItems={tocItems}>
             <h2
@@ -73,6 +85,23 @@ const Traqueostomia = () => {
                         ajuda imediata do serviço de saúde ou do responsável pela assistência.
                     </div>
                 </section>
+
+                <div className="flex items-center justify-center pt-2 md:col-span-2">
+                        <button
+                            onClick={() => setIsRefModalOpen(true)}
+                            className="inline-flex min-h-11 cursor-pointer items-center gap-2 border-2 border-[#003366] bg-white px-6 py-2 font-bold text-[#003366] transition-colors duration-200 hover:bg-[#003366] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#003366]"
+                        >
+                            <BookOpen size={20} aria-hidden="true" />
+                            Ver Referências
+                        </button>
+                    </div>
+
+                    <ReferenceModal
+                        isOpen={isRefModalOpen}
+                        onClose={() => setIsRefModalOpen(false)}
+                        references={references}
+                    />
+
             </div>
         </PageLayout>
     )
