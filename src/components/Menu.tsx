@@ -33,7 +33,12 @@ function Menu() {
         } mt-4 flex-col gap-2 md:mt-0 md:flex md:flex-row md:flex-wrap md:items-center`}
       >
         <li>
-          <NavLink to="/" className={getNavLinkClass} onClick={() => setIsOpen(false)}>
+          <NavLink to="/" end className={getNavLinkClass} onClick={() => setIsOpen(false)}>
+            Início
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/lesao-pressao" className={getNavLinkClass} onClick={() => setIsOpen(false)}>
             Lesão por Pressão
           </NavLink>
         </li>

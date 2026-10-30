@@ -4,6 +4,7 @@ import Header from './components/Header.tsx'
 import Menu from './components/Menu.tsx'
 import FontButtons from './components/acessibilityFontButtons.tsx'
 
+import Home from './pages/Home.tsx'
 import LesaoPorPressao from './pages/LesaoPressao.tsx'
 import Diabetes from './pages/Diabetes.tsx'
 import Sondas from './pages/Sondas.tsx'
@@ -24,7 +25,8 @@ function App() {
         <Menu />
         <FontButtons />
         <Routes>
-          <Route path="/" element={<LesaoPorPressao />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/lesao-pressao" element={<LesaoPorPressao />} />
           <Route path="/diabetes" element={<Diabetes />} />
           <Route path="/estomias" element={<Estomias />} />
           <Route path="/sondas" element={<Sondas />} />
