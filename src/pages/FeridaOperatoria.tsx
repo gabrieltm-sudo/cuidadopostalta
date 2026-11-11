@@ -1,4 +1,8 @@
+import { useState } from 'react'
+
 import PageLayout from '../components/PageLayout'
+import ReferenceModal from '../components/ReferenceModal'
+import { BookOpen } from 'lucide-react'
 
 const FeridaOperatoria = () => {
     const tocItems = [
@@ -6,6 +10,13 @@ const FeridaOperatoria = () => {
         { id: 'cuidados', label: 'Cuidados principais' },
         { id: 'higiene', label: 'Higiene e troca' },
         { id: 'alerta', label: 'Quando procurar ajuda' },
+    ]
+
+    const [isRefModalOpen, setIsRefModalOpen] = useState(false)
+    const references = [
+        "AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA (Brasil). Protocolo de prevenção de infecção de sítio cirúrgico (ISC). Brasília, DF: Anvisa, 2026. Disponível em: https://www.gov.br/anvisa/pt-br/assuntos/servicosdesaude/prevencao-e-controle-de-infeccao-e-resistencia-microbiana/prevencao-das-principais-iras/infeccao-de-sitio-cirurgico/protocolo-2-prevecao-de-isc-final.pdf Acesso em: 10 nov. 2026.",
+        "WORLD HEALTH ORGANIZATION. Global guidelines for the prevention of surgical site infection. 2. ed. Geneva: World Health Organization, 2018. Disponível em: https://www.who.int/publications/i/item/9789241550475 Acesso em: 10 nov. 2026.",
+        "CENTERS FOR DISEASE CONTROL AND PREVENTION. Guideline for the prevention of surgical site infection. Atlanta: CDC, 2017. Disponível em: https://www.cdc.gov/infection-control/hcp/surgical-site-infection/index.html Acesso em: 10 nov. 2026."
     ]
 
     return (
@@ -71,6 +82,21 @@ const FeridaOperatoria = () => {
                         Caso apareçam sinais de infecção ou complicação, procure o serviço de saúde imediatamente.
                     </p>
                 </section>
+                <div className="flex items-center justify-center pt-2 md:col-span-2">
+                        <button
+                            onClick={() => setIsRefModalOpen(true)}
+                            className="inline-flex min-h-11 cursor-pointer items-center gap-2 border-2 border-[#003366] bg-white px-6 py-2 font-bold text-[#003366] transition-colors duration-200 hover:bg-[#003366] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#003366]"
+                        >
+                            <BookOpen size={20} aria-hidden="true" />
+                            Ver Referências
+                        </button>
+                    </div>
+
+                    <ReferenceModal
+                        isOpen={isRefModalOpen}
+                        onClose={() => setIsRefModalOpen(false)}
+                        references={references}
+                    />
             </div>
         </PageLayout>
     )

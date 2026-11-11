@@ -39,7 +39,7 @@ const Estomias = () => {
 	const references = [
 		"SOBEST - Associação Brasileira de Estomaterapia. Manual de orientação a pessoa com estomia na região Amazônica. SOBEST: Belém, 2019. Disponível em: https://sobest.com.br/wp-content/uploads/2020/10/Estomia_na_regiao_Amazonica.pdf. Acesso em: 23 set. 2024.",
 		"SOBEST- Associação Brasileira de Estomaterapia. Consenso Brasileiro de Cuidado às Pessoas Adultas com Estomias de Eliminação.  1. ed. Segmento Farma Editores: São Paulo, 2021. Disponível em: https://sobest.com.br/biblioteca/. Acesso em: 04 out. 2024.",
-		"LIMA, A. H. A. Direitos das Pessoas com Estomias: Manual de Orientações. Belém: Editora Azul, 2023. Disponível em: https://docs.bvsalud.org/biblioref/2023/10/1512054/direitos-da-pessoa-com-estomias-manual-de-orientacoes.pdf Acesso em: 23 set. 2024."
+		"LIMA, A. H. A. Direitos das Pessoas com Estomias: Manual de Orientações. Belém: Editora Azul, 2023. Disponível em: https://docs.bvsalud.org/biblioref/2023/10/1512054/direitos-da-pessoa-com-estomias-manual-de-orientacoes.pdf Acesso em: 23 set. 2024. -- Link quebrado, não encontrado na internet (404)",
 	]
 	
 	return (

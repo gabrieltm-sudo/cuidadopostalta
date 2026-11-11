@@ -40,7 +40,7 @@ const Sondas = () => {
 		"Sondas, Catéteres e Drenos – Quero Instrumentar FMRP-USP https://share.google/RGsrWN80tChVmguPs",
 		"Tipos de drenos cirúrgicos e cuidados da enfermagem | Artmed https://share.google/2W57m991VrcUBbha3",
 		"ARAÚJO, I. S.; et al.Guia multiprofissional de orientação para pacientes em uso de nutrição enteral domiciliar. Petrolina: HEWAB, 2017. Disponível em: https://nutritotal.com.br/pro/wp-content/uploads/2019/03/Guia_Nutri%C3%A7%C3%A3o_Enteral.pdf",
-		"BRASIL. Ministério da Saúde. Mantenha seu sorriso fazendo a higiene bucal corretamente. Brasília, 2012. Disponível em: https://bvsms.saude.gov.br/bvs/publicacoes/mantenha_sorriso_fazendo_higiene_bucal.pdf - Link Quebrado (?)",
+		"BRASIL. Ministério da Saúde. Mantenha seu sorriso fazendo a higiene bucal corretamente. Brasília, 2012. Disponível em: https://bvsms.saude.gov.br/bvs/publicacoes/mantenha_sorriso_fazendo_higiene_bucal.pdf",
 		"Brasil. Ministério da Saúde. Manual de terapia nutricional na atenção especializada hospitalar no âmbito do Sistema Único de Saúde – SUS [recurso eletrônico]. Brasília: Ministério da Saúde, 2016. Disponível em: https://bvsms.saude.gov.br/bvs/publicacoes/manual_terapia_nutricional_atencao_especializada.pdf",
 		"MARQUIORE, L. F; et al. Programa de assistência odontológica a pacientes de transplante da UFMG: orientações de higine bucal e cuidados. Maria Elisa de Souza e Silva - Belo Horizonte: Faculdade de Odontologia, 2021. Disponível em: https://www.odonto.ufmg.br/ecv-odr/wp-content/uploads/sites/23/2021/05/PAOPT-Cartilha-ISBN.pdf",
 		"POTTER, Patricia; PERRY, Anne Griffin. Fundamentos da Enfermagem. Rio de Janeiro: Elsevier, 2013.",

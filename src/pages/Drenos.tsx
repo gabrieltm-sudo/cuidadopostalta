@@ -43,7 +43,7 @@ const Drenos = () => {
 		"Tipos de drenos cirúrgicos e cuidados da enfermagem | Artmed https://share.google/2W57m991VrcUBbha3",
 		"POTTER, P. A.; PERRY, A. G. Fundamentos de Enfermagem. 8. ed. Rio de Janeiro: Elsevier, 2013..",
 		"ANVISA. Agência Nacional de Vigilância Sanitária. Medidas de Prevenção de Infecção Relacionada à Assistência à Saúde. 2017.",
-		"EBSERH. ASSISTÊNCIA AO PACIENTE SUBMETIDO A DRENAGEM TORÁCICA. 2020 Disponível em: https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-nordeste/hu-univasf/acesso-ainformacao/normas/protocolos-institucionais/Assistnciaaopacientesubmetidoadrenagemtorcica.pdf. <- URL quebrada -> Obtida na cartilha do Canva"
+		"EBSERH. ASSISTÊNCIA AO PACIENTE SUBMETIDO A DRENAGEM TORÁCICA. 2020 Disponível em: https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-nordeste/hu-univasf/acesso-ainformacao/normas/protocolos-institucionais/Assistnciaaopacientesubmetidoadrenagemtorcica.pdf <- URL quebrada -> Obtida na cartilha do Canva"
 	]
 
 	return (

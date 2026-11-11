@@ -1,4 +1,7 @@
+import { useState } from 'react'
 import PageLayout from '../components/PageLayout'
+import ReferenceModal from '../components/ReferenceModal'
+import { BookOpen } from 'lucide-react'
 
 const CateterVenosoCentral = () => {
 	const tocItems = [
@@ -7,6 +10,13 @@ const CateterVenosoCentral = () => {
 		{ id: 'diferenca', label: 'Curta x Longa Duração' },
 	]
 
+	const [isRefModalOpen, setIsRefModalOpen] = useState(false)
+	const references = [
+		"AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA (Brasil). Protocolo de prevenção de infecção primária da corrente sanguínea associada a dispositivos de acesso vasculares. Versão 1. Brasília, DF: Anvisa, 2025. Disponível em: https://www.gov.br/anvisa/pt-br/assuntos/servicosdesaude/prevencao-e-controle-de-infeccao-e-resistencia-microbiana/prevencao-das-principais-iras/infeccao-primaria-de-corrente-sanguinea/protocolo-1-prevencao-de-ipcs_1.pdf/@@display-file/file. Acesso em: 9 out. 2026.",
+		"CENTERS FOR DISEASE CONTROL AND PREVENTION (CDC). Intravascular catheter-related infection (BSI) prevention guidelines. Atlanta: CDC, 2024. Disponível em: https://www.cdc.gov/infection-control/hcp/intravascular-catheter-related-infection/index.html Acesso em: 9 out. 2026.",
+		"BC RENAL. Showering with a hemodialysis catheter. [S. l.]: BC Renal, jun. 2021. Disponível em: https://www.bcrenal.ca/resource-gallery/Documents/Showering%20with%20a%20hemodialysis%20catheter.pdf/ Acesso em: 9 out. 2026. "
+	]
+	
 	return (
 		<PageLayout title="Cateter Venoso Central" tocItems={tocItems}>
 			<h2
@@ -87,6 +97,23 @@ const CateterVenosoCentral = () => {
 						</div>
 					</div>
 				</section>
+
+				<div className="flex items-center justify-center pt-2 md:col-span-2">
+                        <button
+                            onClick={() => setIsRefModalOpen(true)}
+                            className="inline-flex min-h-11 cursor-pointer items-center gap-2 border-2 border-[#003366] bg-white px-6 py-2 font-bold text-[#003366] transition-colors duration-200 hover:bg-[#003366] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#003366]"
+                        >
+                            <BookOpen size={20} aria-hidden="true" />
+                            Ver Referências
+                        </button>
+                    </div>
+
+                    <ReferenceModal
+                        isOpen={isRefModalOpen}
+                        onClose={() => setIsRefModalOpen(false)}
+                        references={references}
+                    />
+				
 			</div>
 		</PageLayout>
 	)
