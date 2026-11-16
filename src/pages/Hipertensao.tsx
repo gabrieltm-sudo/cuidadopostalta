@@ -14,10 +14,9 @@ const Hipertensao = () => {
 
         const [isRefModalOpen, setIsRefModalOpen] = useState(false);
         const references = [
-            "Ref 1. https://ufsb.edu.br/proaf/proaf/dace/cqv/calendario-de-saude-e-acessibilidade/26-de-abril-2023-dia-nacional-de-prevencao-e-combate-a-hipertensao-arterial?utm_source=chatgpt.com Acesso em: 10 nov. 2026.",
-            "Ref 2. https://storage.googleapis.com/dpnprzdgiuwsqe/proper-blood-pressure-position.html?utm_source=chatgpt.com Acesso em: 10 nov. 2026.",
-            "Ref 3. https://www.cdc.gov/high-blood-pressure/measure/index.html?utm_source=chatgpt.com Acesso em: 10 nov. 2026.",
-            "Ref 4. https://chatgpt.com/c/6ae26e04-60d8-83e9-a59e-979827b2002e Acesso em: 10 nov. 2026."
+            "https://ufsb.edu.br/proaf/proaf/dace/cqv/calendario-de-saude-e-acessibilidade/26-de-abril-2023-dia-nacional-de-prevencao-e-combate-a-hipertensao-arterial?utm_source=chatgpt.com Acesso em: 10 nov. 2026.",
+            "https://storage.googleapis.com/dpnprzdgiuwsqe/proper-blood-pressure-position.html?utm_source=chatgpt.com Acesso em: 10 nov. 2026.",
+            "https://www.cdc.gov/high-blood-pressure/measure/index.html?utm_source=chatgpt.com Acesso em: 10 nov. 2026.",
         ]
 
     return (
