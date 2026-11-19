@@ -1,3 +1,4 @@
+import VideoRender from '../components/VideoRender'
 import { Link } from 'react-router-dom'
 import {
     Activity,
@@ -70,6 +71,19 @@ const Home = () => (
                     </li>
                 ))}
             </ul>
+            </div>
+
+            <div className="mx-auto w-full max-w-7xl px-4 py-8">
+                <h2 className="mb-6 border-b-2 border-gray-200 pb-2 text-2xl font-bold text-[#003366]">
+                    Vídeo explicativo
+                </h2>
+                <VideoRender
+                    url="https://youtu.be/ikoiN8yMHj8?is=Oz01P5swtS3ycvZX"
+                    title="Título"
+                    description="Descrição."
+                    source="Fonte: XYZ"
+                    className="mx-auto max-w-3xl"
+                />
             </div>
         </main>
 
