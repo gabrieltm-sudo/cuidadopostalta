@@ -1,3 +1,4 @@
+import Illustrations from '../components/Illustrations'
 import { useState } from 'react'
 import PageLayout from '../components/PageLayout'
 import ReferenceModal from '../components/ReferenceModal'
@@ -16,7 +17,7 @@ const CateterVenosoCentral = () => {
 		"CENTERS FOR DISEASE CONTROL AND PREVENTION (CDC). Intravascular catheter-related infection (BSI) prevention guidelines. Atlanta: CDC, 2024. Disponível em: https://www.cdc.gov/infection-control/hcp/intravascular-catheter-related-infection/index.html Acesso em: 9 out. 2026.",
 		"BC RENAL. Showering with a hemodialysis catheter. [S. l.]: BC Renal, jun. 2021. Disponível em: https://www.bcrenal.ca/resource-gallery/Documents/Showering%20with%20a%20hemodialysis%20catheter.pdf/ Acesso em: 9 out. 2026. "
 	]
-	
+
 	return (
 		<PageLayout title="Cateter Venoso Central" tocItems={tocItems}>
 			<h2
@@ -25,6 +26,7 @@ const CateterVenosoCentral = () => {
 			>
 				CUIDADOS COM CATETER VENOSO CENTRAL
 			</h2>
+
 
 			<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 				<section className="bg-white border-2 border-gray-200 p-6 md:col-span-2">
@@ -40,7 +42,9 @@ const CateterVenosoCentral = () => {
 						máquina de hemodiálise, com o intuito de fazer a filtragem das impurezas
 						presentes no organismo do paciente.
 					</p>
-				</section>
+
+                    <Illustrations items={[{"alt":"Ilustração de uma pessoa com cateter e curativo na região do tórax.","caption":"Ilustração de um cateter na região do tórax.","src":"/images/material-equipe/cateter-localizacao.png"}]} />
+</section>
 
 				<section
 					id="cuidados"
@@ -111,9 +115,9 @@ const CateterVenosoCentral = () => {
                     <ReferenceModal
                         isOpen={isRefModalOpen}
                         onClose={() => setIsRefModalOpen(false)}
-                        references={references}
+                        references={[...references, "Imagem indicada no material da equipe: Memorial Sloan Kettering Cancer Center. https://www.mskcc.org/cancer-care/patient-education/autologous-stem-cell-transplant-guide-patients-caregivers"]}
                     />
-				
+
 			</div>
 		</PageLayout>
 	)

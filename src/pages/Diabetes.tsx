@@ -1,3 +1,4 @@
+import Illustrations from '../components/Illustrations'
 import { useState } from 'react'
 import ReferenceModal from '../components/ReferenceModal'
 import { BookOpen } from 'lucide-react'
@@ -11,9 +12,7 @@ import locaisAplicaçao from '../images/Diabetes/locaisAplicaçao.png'
 
 const Diabetes = () => {
 
-    {/*  
-        TODO: Ajustar problema nos links pois está considerando os pontos finais como parte do link
-    */}
+
     const [isRefModalOpen, setIsRefModalOpen] = useState(false);
     const references = [
         "BRASIL. Ministério da Saúde. Diabetes (diabetes mellitus). Brasília, DF: Ministério da Saúde, [s. d.]. Disponível em: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/d/diabetes Acesso em: 9 out. 2026.",
@@ -24,7 +23,7 @@ const Diabetes = () => {
         "Sociedade Brasileira de Diabetes. Diretrizes da Sociedade Brasileira de Diabetes 2019-2020. Disponível em: https://www.diabetes.org.br/profissionais/images/DIRETRIZES-COMPLETA-2019-2020.pdf Acesso em: 20 set. 2024. -- URL Quebrado",
         "Conselho Regional de Enfermagem, Rio Grande do Sul. Protocolos de Enfermagem na Atenção primária à Saúde: Hipertensão e Diabetes. Porto Alegre: Conselho Regional de Enfermagem, Rio Grande do Sul, 2020. Disponível em:  https://www.portalcoren-rs.gov.br/docs/ProtocolosEnfermagem/ProtocoloEnfermagemHipertensaoDiabetes.pdf Acesso em: 20 set. 2024."
     ]
-    
+
     return (
         <PageLayout
             title="Diabetes Mellitus Tipo 1 e 2"
@@ -33,8 +32,8 @@ const Diabetes = () => {
                 { id: 'tipo-1', label: 'Diabetes Mellitus Tipo 1' },
                 { id: 'sintomas-tipo-1', label: 'Sintomas do Tipo 1' },
                 { id: 'tratamento', label: 'Tratamento' },
-                { id: 'aplicacao-insulina', label: 'Aplicação da insulina' },
                 { id: 'tipo-2', label: 'Diabetes Mellitus Tipo 2' },
+                { id: 'aplicacao-insulina', label: 'Aplicação da insulina (tipos 1 e 2)' },
                 { id: 'locais-aplicacao', label: 'Locais para aplicação' },
                 { id: 'cuidados-insulina', label: 'Cuidados com a Insulina' },
                 { id: 'descarte', label: 'Descarte' },
@@ -46,7 +45,8 @@ const Diabetes = () => {
                 <section>
                     <h2 id="o-que-e" className="bg-[#003366] py-2 text-center font-bold text-white">
                         O que é?
-                    </h2>                
+                    </h2>
+
                     <div className="mt-4 grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.7fr)] lg:items-center">
                         <div className="space-y-4">
                             <p>
@@ -85,7 +85,7 @@ const Diabetes = () => {
                         <section className="bg-white border-2 border-gray-200 p-6 h-full">
                             <h2 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">O que é?</h2>
                             <p className="mb-6 text-base leading-7 text-gray-700">
-                                Doença autoimune, que atrapalha a produção de insulina. Ocasionando aumento nas taxas de glicemia.
+                                Doença autoimune em que o organismo deixa de produzir insulina, elevando a glicose no sangue.
                             </p>
 
                             <h2 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">O que é Hipoglicemia?</h2>
@@ -111,49 +111,27 @@ const Diabetes = () => {
                         <h2 id="tratamento" className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">Tratamento</h2>
                         <ul className="list-disc space-y-3 pl-5 text-base leading-7 text-gray-700">
                             <li>Essa doença não possui cura, mas o tratamento pode ajudar.</li>
-                            <li>O tratamento visa a manutenção dos níveis normais de açúcar no sangue com acompanhamento regular, insulinoterapia, dieta e exercícios físicos.</li>
+                            <li>O tratamento visa a manutenção dos níveis de glicose no sangue com acompanhamento regular, insulinoterapia, dieta e exercícios físicos.</li>
                             <li>É necessário injeções diárias de insulina para manterem a glicose no sangue em valores considerados normais (o estado de normalidade da glicemia em jejum é de 70 mg/dl a 100 mg/dl).</li>
                         </ul>
-                    </section>
+
+                    <Illustrations items={[{"alt":"Ilustração de uma medição de glicose com glicosímetro.","caption":"Medição de glicose com glicosímetro. O valor desenhado na tela é apenas ilustrativo.","source":"Ilustração identificada como feita por IA no material fornecido pela equipe.","src":"/images/material-equipe/diabetes-glicemia.png"}]} />
+</section>
 
                     <section className="bg-white border-2 border-gray-200 p-6">
                         <h2 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">Regular x NPH</h2>
                         <ul className="space-y-4 text-base leading-7 text-gray-700">
                             <li className="bg-blue-50 p-3 border border-blue-100">
-                                <strong className="text-blue-900 block mb-1">A insulina Regular:</strong> 
+                                <strong className="text-blue-900 block mb-1">A insulina Regular:</strong>
                                 Tem ação rápida, duração de 8-10h, as doses são feitas 30 minutos antes das refeições e tem o aspecto cristalino.
                             </li>
                             <li className="bg-gray-50 p-3 border border-gray-200">
-                                <strong className="text-blue-900 block mb-1">A insulina NPH:</strong> 
+                                <strong className="text-blue-900 block mb-1">A insulina NPH:</strong>
                                 Tem ação intermediária, duração de 12-18h e tem o aspecto turvo.
                             </li>
                         </ul>
                     </section>
                 </div>
-
-                <section className="bg-white border-2 border-gray-200 p-6">
-                    <h2 id="aplicacao-insulina" className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">Modo de aplicação da Insulina na seringa</h2>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <div>
-                            <ol className="mb-6 list-decimal space-y-4 pl-5 text-base leading-7 text-gray-700">
-                                <li>Lavar as mãos com água e sabão antes da preparação da insulina;</li>
-                                <li>Proceder a limpeza (álcool 70% e algodão) na borracha do frasco de insulina;</li>
-                                <li>O frasco de insulina deve ser rolado gentilmente entre as mãos para misturá-la, antes de aspirar seu conteúdo;</li>
-                                <li>Não é necessário limpar o local de aplicação com álcool.</li>
-                            </ol>
-                            <h3 className="mb-2 mt-6 text-base font-semibold leading-6 text-[#003366]">Modo de aplicação:</h3>
-                            <ul className="list-disc space-y-3 pl-5 text-base leading-7 text-gray-700">
-                                <li>O local deve ser pinçado levemente entre os dois dedos e a agulha deve ser introduzida completamente, em ângulo de 90 graus e em indivíduos magros em ângulo de 45 graus.</li>
-                                <li>Esperar cinco segundos após a aplicação antes de retirar a agulha do subcutâneo, para garantir que toda dose de insulina foi aplicada.</li>
-                            </ul>
-                        </div>
-
-                        <div className="flex flex-col gap-4 justify-center">
-                            <ImageFocus src={comoPinçar} alt="Ilustração de como pinçar a pele para aplicação da insulina" className="mx-auto max-w-full" />
-                            <ImageFocus src={comoAplicar} alt="Ilustração: Ângulos de aplicação da agulha na pele (90º e 45º)" className="mx-auto max-w-full" />
-                        </div>
-                    </div>
-                </section>
 
                 <header id="tipo-2" className="bg-blue-900 text-white px-6 py-4 border-b-4 border-blue-700 mt-12">
                     <h1 className="text-2xl font-bold sm:text-3xl">Diabetes Mellitus Tipo 2</h1>
@@ -163,12 +141,7 @@ const Diabetes = () => {
                     <section className="bg-white border-2 border-gray-200 p-6">
                         <h2 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">O que é?</h2>
                         <p className="text-base leading-7">
-                            É a perda progressiva e ressitência a insulina, hormônio responsável
-                            pelo equilibrio de açúcar (glicose) no sangue. Suas manifestações
-                            ocorrem geralmente na idade adulta (após os 40 anos). Ocorre
-                            principalmente em pessoas com excesso de peso, comportamento
-                            sedentário, hábitos alimentares não saudáveis e história familiar
-                            de diabetes.
+                            O organismo utiliza a insulina com dificuldade e pode produzir menos desse hormônio. Isso aumenta a glicose no sangue. O acompanhamento inclui alimentação, atividade física e medicamentos conforme prescrição.
                         </p>
                     </section>
 
@@ -206,6 +179,31 @@ const Diabetes = () => {
                         </ul>
                     </section>
                 </div>
+
+                <section className="bg-white border-2 border-gray-200 p-6">
+                    <h2 id="aplicacao-insulina" className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">Modo de aplicação da insulina na seringa</h2>
+                    <p className="mb-4 rounded border border-blue-200 bg-blue-50 p-4">Estas orientações se aplicam a quem usa insulina, tanto no tipo 1 quanto no tipo 2. Siga a prescrição e a técnica ensinada pela equipe de saúde.</p>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <ol className="mb-6 list-decimal space-y-4 pl-5 text-base leading-7 text-gray-700">
+                                <li>Lavar as mãos com água e sabão antes da preparação da insulina;</li>
+                                <li>Proceder a limpeza (álcool 70% e algodão) na borracha do frasco de insulina;</li>
+                                <li>O frasco de insulina deve ser rolado gentilmente entre as mãos para misturá-la, antes de aspirar seu conteúdo;</li>
+                                <li>Não é necessário limpar o local de aplicação com álcool.</li>
+                            </ol>
+                            <h3 className="mb-2 mt-6 text-base font-semibold leading-6 text-[#003366]">Modo de aplicação:</h3>
+                            <ul className="list-disc space-y-3 pl-5 text-base leading-7 text-gray-700">
+                                <li>O local deve ser pinçado levemente entre os dois dedos e a agulha deve ser introduzida completamente, em ângulo de 90 graus e em indivíduos magros em ângulo de 45 graus.</li>
+                                <li>Esperar cinco segundos após a aplicação antes de retirar a agulha do subcutâneo, para garantir que toda dose de insulina foi aplicada.</li>
+                            </ul>
+                        </div>
+
+                        <div className="flex flex-col gap-4 justify-center">
+                            <ImageFocus src={comoPinçar} alt="Ilustração de como pinçar a pele para aplicação da insulina" className="mx-auto max-w-full" />
+                            <ImageFocus src={comoAplicar} alt="Ilustração: Ângulos de aplicação da agulha na pele (90º e 45º)" className="mx-auto max-w-full" />
+                        </div>
+                    </div>
+                </section>
 
                 <section className="bg-white border-2 border-gray-200 p-6 mt-12">
                     <h2 id="locais-aplicacao" className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">Locais para aplicação</h2>
@@ -274,7 +272,7 @@ const Diabetes = () => {
                             Neuropatia Diabética
                         </h3>
                         <p className="text-base leading-7">
-                            A neuropatia costuma vir acompanhada da diminuição da energia, da mobilidade, da satisfação com a vida e do envolvimento com as atividades sociais. Tanto as alterações nos vasos sanguíneos quanto no metabolismo podem causar danos aos nervos periféricos.
+                            O diabetes pode causar danos aos nervos, com formigamento e alteração da sensibilidade. Examine os pés diariamente e mantenha o acompanhamento com a equipe de saúde.
                         </p>
                     </section>
 
@@ -311,7 +309,7 @@ const Diabetes = () => {
                             Alteração de humor, ansiedade e depressão
                         </h3>
                         <p className="text-base leading-7">
-                            Ao receber o diagnóstico de diabetes, muitas pessoas apresentam várias reações emocionais, como choque, negação, entre outras. O mental e o emocional podem ser afetados com o diagnóstico de alguma doença crônica, como o diabetes. Procure ajuda profissional!
+                            O diagnóstico pode afetar o bem-estar emocional. Converse com a equipe de saúde e procure apoio profissional quando necessário.
                         </p>
                     </section>
                 </div>
@@ -324,7 +322,7 @@ const Diabetes = () => {
                         Ver Referências
                     </button>
                 </div>
-                
+
                 <ReferenceModal
                     isOpen={isRefModalOpen}
                     onClose={() => setIsRefModalOpen(false)}

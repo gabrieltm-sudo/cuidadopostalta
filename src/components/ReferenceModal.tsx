@@ -1,5 +1,5 @@
 import { X } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface ReferenceModalProps {
   isOpen: boolean;
@@ -13,12 +13,12 @@ const renderReference = (text: string) =>
     /^https?:\/\//.test(part) ? (
       <a
         key={i}
-        href={part}
+        href={part.replace(/[.,;]+$/, '')}
         target="_blank"
         rel="noopener noreferrer"
         className="break-all font-medium text-[#003366] underline underline-offset-2 hover:text-blue-700"
       >
-        {part}
+        Clique aqui<span className="sr-only"> para abrir a fonte em uma nova aba</span>
       </a>
     ) : (
       <span key={i}>{part}</span>
@@ -26,19 +26,16 @@ const renderReference = (text: string) =>
   );
 
 const ReferenceModal = ({ isOpen, onClose, references }: ReferenceModalProps) => {
-  const [visible, setVisible] = useState(false);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   // Trava o scroll do fundo, fecha com Esc e dispara a animação de entrada
   useEffect(() => {
     if (!isOpen) {
-      setVisible(false);
       return;
     }
 
     document.body.style.overflow = 'hidden';
     const frame = requestAnimationFrame(() => {
-      setVisible(true);
       closeButtonRef.current?.focus();
     });
 
@@ -61,7 +58,7 @@ const ReferenceModal = ({ isOpen, onClose, references }: ReferenceModalProps) =>
     <div
       onClick={onClose}
       className={`fixed inset-0 z-100 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm transition-opacity duration-200 ${
-        visible ? 'opacity-100' : 'opacity-0'
+        'opacity-100'
       }`}
     >
       {/* Caixa do Modal */}
@@ -71,7 +68,7 @@ const ReferenceModal = ({ isOpen, onClose, references }: ReferenceModalProps) =>
         aria-labelledby="reference-modal-title"
         onClick={(e) => e.stopPropagation()}
         className={`flex max-h-[85vh] w-full max-w-2xl flex-col border-4 border-[#003366] bg-white transition-all duration-200 ${
-          visible ? 'translate-y-0 scale-100 opacity-100' : 'translate-y-2 scale-95 opacity-0'
+          'translate-y-0 scale-100 opacity-100'
         }`}
       >
         {/* Cabeçalho */}

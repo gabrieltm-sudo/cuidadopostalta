@@ -36,6 +36,10 @@ const ImageFocus: React.FC<ImageFocusProps> = ({src, alt, className = ''}) => {
             <img
                 src={src}
                 alt={alt}
+                role="button"
+                tabIndex={0}
+                aria-label={`Ampliar: ${alt}`}
+                onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); setIsFocused(true) } }}
                 onClick={() => setIsFocused(true)}
                 className={`${className} cursor-pointer hover:opacity-90 transition-opacity`}
                 loading="lazy"
@@ -44,6 +48,7 @@ const ImageFocus: React.FC<ImageFocusProps> = ({src, alt, className = ''}) => {
              {isFocused && (
                 <>
                     <div onClick={() => setIsFocused(false)}
+                        role="dialog" aria-modal="true" aria-label={alt}
                         className="fixed inset-0 z-50 flex items-center justify-center bg-gray-400/50 backdrop-blur-sm transition-opacity"
                     >
                         <button onClick={(e) => { e.stopPropagation(); 

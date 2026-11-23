@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import ImageFocus from './ImageFocus'
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface CarouselImage {
@@ -15,8 +16,6 @@ interface StepCarouselProps {
 const StepCarousel = ({ steps }: StepCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  if (!steps || steps.length === 0) return null;
-
   const nextSlide = () => {
     if (currentIndex < steps.length - 1) setCurrentIndex((prev) => prev + 1);
   };
@@ -30,6 +29,8 @@ const StepCarousel = ({ steps }: StepCarouselProps) => {
   };
 
   const touchStart = useRef({x: 0, y: 0});
+
+  if (!steps || steps.length === 0) return null;
 
   const handlePointerDown = (e: React.PointerEvent) => {
     touchStart.current = {
@@ -64,7 +65,7 @@ const StepCarousel = ({ steps }: StepCarouselProps) => {
       <div className="relative flex h-80 w-full items-center justify-center md:h-96">
         
         {/* Indicadores Superiores (Quadrados Flat) */}
-        <div className="absolute top-4 flex gap-2">
+        <div className="absolute top-4 z-10 flex gap-2">
           {steps.map((_, index) => (
             <button
               key={index}
@@ -90,7 +91,7 @@ const StepCarousel = ({ steps }: StepCarouselProps) => {
                 style={{width: `${100/steps.length}%`}}
               >
                 {step.image ? (
-                  <img src={step.image} alt={step.alt} draggable={false} className="h-full w-full object-contain"/>
+                  <ImageFocus src={step.image} alt={step.alt} className="h-full w-full object-contain"/>
                 ) : (
                   <div className="text-center font-bold text-gray-400">
                     [Imagem: {step.id}]

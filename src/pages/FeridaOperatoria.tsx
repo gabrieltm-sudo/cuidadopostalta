@@ -1,8 +1,6 @@
-import { useState } from 'react'
-
+import Illustrations from '../components/Illustrations'
+import References from '../components/References'
 import PageLayout from '../components/PageLayout'
-import ReferenceModal from '../components/ReferenceModal'
-import { BookOpen } from 'lucide-react'
 
 const FeridaOperatoria = () => {
     const tocItems = [
@@ -10,13 +8,6 @@ const FeridaOperatoria = () => {
         { id: 'cuidados', label: 'Cuidados principais' },
         { id: 'higiene', label: 'Higiene e troca' },
         { id: 'alerta', label: 'Quando procurar ajuda' },
-    ]
-
-    const [isRefModalOpen, setIsRefModalOpen] = useState(false)
-    const references = [
-        "AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA (Brasil). Protocolo de prevenção de infecção de sítio cirúrgico (ISC). Brasília, DF: Anvisa, 2026. Disponível em: https://www.gov.br/anvisa/pt-br/assuntos/servicosdesaude/prevencao-e-controle-de-infeccao-e-resistencia-microbiana/prevencao-das-principais-iras/infeccao-de-sitio-cirurgico/protocolo-2-prevecao-de-isc-final.pdf Acesso em: 10 nov. 2026.",
-        "WORLD HEALTH ORGANIZATION. Global guidelines for the prevention of surgical site infection. 2. ed. Geneva: World Health Organization, 2018. Disponível em: https://www.who.int/publications/i/item/9789241550475 Acesso em: 10 nov. 2026.",
-        "CENTERS FOR DISEASE CONTROL AND PREVENTION. Guideline for the prevention of surgical site infection. Atlanta: CDC, 2017. Disponível em: https://www.cdc.gov/infection-control/hcp/surgical-site-infection/index.html Acesso em: 10 nov. 2026."
     ]
 
     return (
@@ -27,6 +18,11 @@ const FeridaOperatoria = () => {
             >
                 CUIDADOS COM FERIDA OPERATÓRIA
             </h2>
+
+
+            <p className="rounded border-2 border-red-300 bg-red-50 p-4 font-bold text-red-800">
+                Antes de realizar qualquer cuidado, siga as orientações dos profissionais de saúde responsáveis pelo seu atendimento.
+            </p>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <section className="bg-white border-2 border-gray-200 p-6 md:col-span-2">
@@ -39,7 +35,9 @@ const FeridaOperatoria = () => {
                         A limpeza correta, a observação do local e a avaliação de sinais de infecção
                         ajudam a evitar complicações.
                     </p>
-                </section>
+                
+                    <Illustrations items={[{"alt":"Ilustração de uma incisão aberta, suturada e fechada.","caption":"Ilustração das etapas de fechamento de uma incisão. A evolução varia entre pessoas e cirurgias.","src":"/images/material-equipe/ferida-etapas.png"}]} />
+</section>
 
                 <section id="cuidados" className="scroll-mt-24 bg-white border-2 border-gray-200 p-6">
                     <h3 className="mb-4 border-b-2 border-[#003366] pb-2 text-xl font-bold text-[#003366]">
@@ -52,7 +50,9 @@ const FeridaOperatoria = () => {
                         <li>Seguir as orientações do médico ou enfermagem sobre troca do curativo;</li>
                         <li>Usar roupas confortáveis e evitar pressionar a região.</li>
                     </ul>
-                </section>
+                
+                    <Illustrations items={[{"alt":"Fotografia de uma incisão cirúrgica fechada com pontos.","caption":"Exemplo de uma ferida operatória suturada.","src":"/images/material-equipe/ferida-suturada.png"}]} />
+</section>
 
                 <section id="higiene" className="scroll-mt-24 bg-white border-2 border-gray-200 p-6">
                     <h3 className="mb-4 border-b-2 border-[#003366] pb-2 text-xl font-bold text-[#003366]">
@@ -82,23 +82,22 @@ const FeridaOperatoria = () => {
                         Caso apareçam sinais de infecção ou complicação, procure o serviço de saúde imediatamente.
                     </p>
                 </section>
-                <div className="flex items-center justify-center pt-2 md:col-span-2">
-                        <button
-                            onClick={() => setIsRefModalOpen(true)}
-                            className="inline-flex min-h-11 cursor-pointer items-center gap-2 border-2 border-[#003366] bg-white px-6 py-2 font-bold text-[#003366] transition-colors duration-200 hover:bg-[#003366] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#003366]"
-                        >
-                            <BookOpen size={20} aria-hidden="true" />
-                            Ver Referências
-                        </button>
-                    </div>
-
-                    <ReferenceModal
-                        isOpen={isRefModalOpen}
-                        onClose={() => setIsRefModalOpen(false)}
-                        references={references}
-                    />
             </div>
-        </PageLayout>
+        <References items={[
+            {
+                title: 'AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA (Brasil). Protocolo de prevenção de infecção de sítio cirúrgico (ISC). Brasília, DF: Anvisa, 2026. Disponível em:',
+                url: 'https://www.gov.br/anvisa/pt-br/assuntos/servicosdesaude/prevencao-e-controle-de-infeccao-e-resistencia-microbiana/prevencao-das-principais-iras/infeccao-de-sitio-cirurgico/protocolo-2-prevecao-de-isc-final.pdf',
+            },
+            {
+                title: 'WORLD HEALTH ORGANIZATION. Global guidelines for the prevention of surgical site infection. 2. ed. Geneva: World Health Organization, 2018. Disponível em:',
+                url: 'https://www.who.int/publications/i/item/9789241550475',
+            },
+            {
+                title: 'CENTERS FOR DISEASE CONTROL AND PREVENTION. Guideline for the prevention of surgical site infection. Atlanta: CDC, 2017. Disponível em:',
+                url: 'https://www.cdc.gov/infection-control/hcp/surgical-site-infection/index.html',
+            },
+        ]} accessedOn="10 nov. 2026" imageSources={[{"title":"Imagem indicada no material da equipe: Medlatec.","url":"https://medlatec.vn/tin-tuc/5-dau-hieu-vet-mo-dang-lanh-va-hoi-phuc-tot"},{"title":"Imagem indicada no material da equipe: Vuelo Pharma.","url":"https://www.vuelopharma.com/feridas-cirurgicas/"}]} />
+</PageLayout>
     )
 }
 

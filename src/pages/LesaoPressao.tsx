@@ -1,3 +1,4 @@
+import Illustrations from '../components/Illustrations'
 import { useState } from 'react'
 
 import PageLayout from '../components/PageLayout'
@@ -22,6 +23,7 @@ const LesaoPorPressao = () => {
 
     const [isRefModalOpen, setIsRefModalOpen] = useState(false);
     const references = [
+		"Imagem indicada no material da equipe: Hospital de Clínicas de Porto Alegre. https://www.hcpa.edu.br/en/area-do-paciente-apresentacao/area-do-paciente-sua-saude/educacao-em-saude?catid=2&id=98&m=0&task=download.send",
         "BRASPEN JOURNAL- Brazilian Society of Parenteral and Enteral Nutrition. Campanha Diga não a Lesão por Pressão. São Paulo: Braspen, 2020. ISSN 2525-7374. 35 (Supl 1) Disponível em: http://www.braspen.org/braspen-journal Acesso em: 20 set. 2024.",
         "EUROPEAN PRESSURE ULCER ADVISORY PANEL (EPUAP); NATIONAL PRESSURE INJURY ADVISORY PANEL (NPIAP); PAN PACIFIC PRESSURE INJURY ALLIANCE (PPPIA). The International Pressure Ulcer/Injury Clinical Practice Guideline. 4. ed. 2026. Disponível em: https://epuap.org/pu-guidelines/",
         "BRASIL. Ministério da Saúde; AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA (ANVISA); FUNDAÇÃO OSWALDO CRUZ (FIOCRUZ). Protocolo para prevenção de úlcera por pressão. Brasília, DF: Ministério da Saúde, 2013. Disponível em: https://bibliotecadigital.anvisa.gov.br/jspui/handle/anvisa/1775"
@@ -34,6 +36,7 @@ const LesaoPorPressao = () => {
                     <h2 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">
                         O que é?
                     </h2>
+
                     <p className="text-base leading-7">
                         São feridas causadas pela falta ou diminuição da circulação sanguínea.
                         Isso ocorre pela pressão feita na pele por estar muito tempo na mesma
@@ -52,7 +55,9 @@ const LesaoPorPressao = () => {
                         <li>Os lençois devem estar bem espichados;</li>
                         <li>Pode usar almofadas e travesseiros para auxiliar no posicionamento correto.</li>
                     </ul>
-                </section>
+                
+                    <Illustrations items={[{"alt":"Ilustrações de posicionamento no leito com apoios sob o corpo e membros.","caption":"Exemplos de posicionamento com apoios no leito.","src":"/images/material-equipe/posicionamento-apoios.png"}]} />
+</section>
 
                 <section id="sinais" className="scroll-mt-24 border-2 border-gray-200 bg-white p-6">
                     <h2 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">
