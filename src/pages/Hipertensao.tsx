@@ -1,3 +1,4 @@
+import Illustrations from '../components/Illustrations'
 import PageLayout from '../components/PageLayout'
 
 const Hipertensao = () => {
@@ -17,6 +18,7 @@ const Hipertensao = () => {
             >
                 HIPERTENSÃO ARTERIAL
             </h2>
+
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <section className="bg-white border-2 border-gray-200 p-6 md:col-span-2">
@@ -65,7 +67,9 @@ const Hipertensao = () => {
                         associada a avaliação dos sinais e fatores de risco. A hipertensão é considerada
                         quando a pressão permanece elevada em pelo menos duas medidas.
                     </p>
-                </section>
+                
+                    <Illustrations items={[{"alt":"Pessoa sentada com costas apoiadas, pés no chão e braço descoberto apoiado ao nível do coração.","caption":"Posicionamento ilustrativo para medir a pressão arterial.","source":"Ilustração identificada como feita por IA no material fornecido pela equipe.","src":"/images/material-equipe/pressao-posicionamento.png"}]} />
+</section>
 
                 <section id="controle" className="scroll-mt-24 bg-white border-2 border-gray-200 p-6 md:col-span-2">
                     <h3 className="mb-4 border-b-2 border-[#003366] pb-2 text-xl font-bold text-[#003366]">

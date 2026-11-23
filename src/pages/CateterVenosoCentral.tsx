@@ -1,3 +1,5 @@
+import Illustrations from '../components/Illustrations'
+import References from '../components/References'
 import PageLayout from '../components/PageLayout'
 
 const CateterVenosoCentral = () => {
@@ -16,6 +18,7 @@ const CateterVenosoCentral = () => {
 				CUIDADOS COM CATETER VENOSO CENTRAL
 			</h2>
 
+
 			<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 				<section className="bg-white border-2 border-gray-200 p-6 md:col-span-2">
 					<h3 className="mb-4 border-b-2 border-[#003366] pb-2 text-xl font-bold text-[#003366]">
@@ -30,7 +33,9 @@ const CateterVenosoCentral = () => {
 						máquina de hemodiálise, com o intuito de fazer a filtragem das impurezas
 						presentes no organismo do paciente.
 					</p>
-				</section>
+				
+                    <Illustrations items={[{"alt":"Ilustração de uma pessoa com cateter e curativo na região do tórax.","caption":"Ilustração de um cateter na região do tórax.","src":"/images/material-equipe/cateter-localizacao.png"}]} />
+</section>
 
 				<section
 					id="cuidados"
@@ -88,7 +93,8 @@ const CateterVenosoCentral = () => {
 					</div>
 				</section>
 			</div>
-		</PageLayout>
+		<References items={[{"title":"CENTERS FOR DISEASE CONTROL AND PREVENTION. Intravascular Catheter-related Infection (BSI) Prevention Guidelines. Página atualizada em 2024.","url":"https://www.cdc.gov/infection-control/hcp/intravascular-catheter-related-infection/index.html"}]} imageSources={[{"title":"Imagem indicada no material da equipe: Memorial Sloan Kettering Cancer Center.","url":"https://www.mskcc.org/cancer-care/patient-education/autologous-stem-cell-transplant-guide-patients-caregivers"}]} />
+</PageLayout>
 	)
 }
 
