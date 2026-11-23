@@ -1,12 +1,21 @@
 import Illustrations from '../components/Illustrations'
-import References from '../components/References'
+import { useState } from 'react'
 import PageLayout from '../components/PageLayout'
+import ReferenceModal from '../components/ReferenceModal'
+import { BookOpen } from 'lucide-react'
 
 const CateterVenosoCentral = () => {
 	const tocItems = [
 		{ id: 'o-que-e', label: 'O que é?' },
 		{ id: 'cuidados', label: 'Cuidados' },
 		{ id: 'diferenca', label: 'Curta x Longa Duração' },
+	]
+
+	const [isRefModalOpen, setIsRefModalOpen] = useState(false)
+	const references = [
+		"AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA (Brasil). Protocolo de prevenção de infecção primária da corrente sanguínea associada a dispositivos de acesso vasculares. Versão 1. Brasília, DF: Anvisa, 2025. Disponível em: https://www.gov.br/anvisa/pt-br/assuntos/servicosdesaude/prevencao-e-controle-de-infeccao-e-resistencia-microbiana/prevencao-das-principais-iras/infeccao-primaria-de-corrente-sanguinea/protocolo-1-prevencao-de-ipcs_1.pdf/@@display-file/file. Acesso em: 9 out. 2026.",
+		"CENTERS FOR DISEASE CONTROL AND PREVENTION (CDC). Intravascular catheter-related infection (BSI) prevention guidelines. Atlanta: CDC, 2024. Disponível em: https://www.cdc.gov/infection-control/hcp/intravascular-catheter-related-infection/index.html Acesso em: 9 out. 2026.",
+		"BC RENAL. Showering with a hemodialysis catheter. [S. l.]: BC Renal, jun. 2021. Disponível em: https://www.bcrenal.ca/resource-gallery/Documents/Showering%20with%20a%20hemodialysis%20catheter.pdf/ Acesso em: 9 out. 2026. "
 	]
 
 	return (
@@ -33,7 +42,7 @@ const CateterVenosoCentral = () => {
 						máquina de hemodiálise, com o intuito de fazer a filtragem das impurezas
 						presentes no organismo do paciente.
 					</p>
-				
+
                     <Illustrations items={[{"alt":"Ilustração de uma pessoa com cateter e curativo na região do tórax.","caption":"Ilustração de um cateter na região do tórax.","src":"/images/material-equipe/cateter-localizacao.png"}]} />
 </section>
 
@@ -92,9 +101,25 @@ const CateterVenosoCentral = () => {
 						</div>
 					</div>
 				</section>
+
+				<div className="flex items-center justify-center pt-2 md:col-span-2">
+                        <button
+                            onClick={() => setIsRefModalOpen(true)}
+                            className="inline-flex min-h-11 cursor-pointer items-center gap-2 border-2 border-[#003366] bg-white px-6 py-2 font-bold text-[#003366] transition-colors duration-200 hover:bg-[#003366] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#003366]"
+                        >
+                            <BookOpen size={20} aria-hidden="true" />
+                            Ver Referências
+                        </button>
+                    </div>
+
+                    <ReferenceModal
+                        isOpen={isRefModalOpen}
+                        onClose={() => setIsRefModalOpen(false)}
+                        references={[...references, "Imagem indicada no material da equipe: Memorial Sloan Kettering Cancer Center. https://www.mskcc.org/cancer-care/patient-education/autologous-stem-cell-transplant-guide-patients-caregivers"]}
+                    />
+
 			</div>
-		<References items={[{"title":"CENTERS FOR DISEASE CONTROL AND PREVENTION. Intravascular Catheter-related Infection (BSI) Prevention Guidelines. Página atualizada em 2024.","url":"https://www.cdc.gov/infection-control/hcp/intravascular-catheter-related-infection/index.html"}]} imageSources={[{"title":"Imagem indicada no material da equipe: Memorial Sloan Kettering Cancer Center.","url":"https://www.mskcc.org/cancer-care/patient-education/autologous-stem-cell-transplant-guide-patients-caregivers"}]} />
-</PageLayout>
+		</PageLayout>
 	)
 }
 

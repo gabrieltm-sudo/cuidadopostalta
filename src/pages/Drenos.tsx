@@ -43,7 +43,8 @@ const Drenos = () => {
 		"Tipos de drenos cirúrgicos e cuidados da enfermagem | Artmed https://share.google/2W57m991VrcUBbha3",
 		"POTTER, P. A.; PERRY, A. G. Fundamentos de Enfermagem. 8. ed. Rio de Janeiro: Elsevier, 2013..",
 		"ANVISA. Agência Nacional de Vigilância Sanitária. Medidas de Prevenção de Infecção Relacionada à Assistência à Saúde. 2017.",
-		"UNIVERSIDADE FEDERAL DO PARÁ. Hospital Universitário João de Barros Barreto. Cuidados com o Dreno Porto-VAC em casa. 2025. https://educapes.capes.gov.br/handle/capes/1171888"
+		"UNIVERSIDADE FEDERAL DO PARÁ. Hospital Universitário João de Barros Barreto. Cuidados com o Dreno Porto-VAC em casa. 2025. https://educapes.capes.gov.br/handle/capes/1171888",
+		"EBSERH. ASSISTÊNCIA AO PACIENTE SUBMETIDO A DRENAGEM TORÁCICA. 2020 Disponível em: https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-nordeste/hu-univasf/acesso-ainformacao/normas/protocolos-institucionais/Assistnciaaopacientesubmetidoadrenagemtorcica.pdf <- URL quebrada -> Obtida na cartilha do Canva"
 	]
 
 	return (
@@ -92,7 +93,7 @@ const Drenos = () => {
 					</div>
 				</section>
 
-				
+
 
 				<section className="bg-white border-2 border-gray-200 p-6">
 					<h3 className="text-[#003366] text-xl font-bold mb-4 border-b-2 border-[#003366] pb-2">
@@ -105,7 +106,7 @@ const Drenos = () => {
 						<li>
 							Após o esvaziamento, deve-se comprimir o dreno para proporcionar vácuo em seu interior;
 						</li>
-						
+
 						<li>
 							Observar o líquido quanto a cor, aspecto e quantidade;
 						</li>
@@ -136,7 +137,7 @@ const Drenos = () => {
 							Sentido da limpeza: inicia-se pelo local de inserção do dreno até a região ao redor da inserção (proximal-distal).
 						</li>
 					</ul>
-					
+
 					<ImageFocus src={limpezaCurativo} alt="Forma de limpar curativo" className="mx-auto max-w-full"
 					/>
 				</section></div>
@@ -192,7 +193,7 @@ const Drenos = () => {
 					</ul>
 				</section>
 
-				
+
 
 				<section className="bg-white border-2 border-gray-200 p-6 md:col-span-2">
 					<h3 className="text-[#003366] text-xl font-bold mb-4 border-b-2 border-[#003366] pb-2">
@@ -200,7 +201,7 @@ const Drenos = () => {
 					</h3>
 					<ul className="list-disc text-justify space-y-3 pl-5 leading-7 marker:font-bold marker:text-[#003366] marker:text-lg">
 						<li>
-							Se tiver temperatura acima de 37,5°C; 
+							Se tiver temperatura acima de 37,5°C;
 						</li>
 						<li>
 							Sangramento anormal pelo local de inserção do dreno ou pele arroxeada aumentar;

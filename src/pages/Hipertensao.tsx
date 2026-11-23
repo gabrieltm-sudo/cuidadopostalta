@@ -1,5 +1,8 @@
 import Illustrations from '../components/Illustrations'
+import { useState } from 'react';
 import PageLayout from '../components/PageLayout'
+import ReferenceModal from '../components/ReferenceModal'
+import { BookOpen } from 'lucide-react'
 
 const Hipertensao = () => {
     const tocItems = [
@@ -9,6 +12,14 @@ const Hipertensao = () => {
         { id: 'diagnostico', label: 'Diagnóstico' },
         { id: 'controle', label: 'Como controlar' },
     ]
+
+        const [isRefModalOpen, setIsRefModalOpen] = useState(false);
+        const references = [
+            "Ref 1. https://ufsb.edu.br/proaf/proaf/dace/cqv/calendario-de-saude-e-acessibilidade/26-de-abril-2023-dia-nacional-de-prevencao-e-combate-a-hipertensao-arterial?utm_source=chatgpt.com Acesso em: 10 nov. 2026.",
+            "Ref 2. https://storage.googleapis.com/dpnprzdgiuwsqe/proper-blood-pressure-position.html?utm_source=chatgpt.com Acesso em: 10 nov. 2026.",
+            "Ref 3. https://www.cdc.gov/high-blood-pressure/measure/index.html?utm_source=chatgpt.com Acesso em: 10 nov. 2026.",
+            "Ref 4. https://chatgpt.com/c/6ae26e04-60d8-83e9-a59e-979827b2002e Acesso em: 10 nov. 2026."
+        ]
 
     return (
         <PageLayout title="Hipertensão Arterial" tocItems={tocItems}>
@@ -67,7 +78,7 @@ const Hipertensao = () => {
                         associada a avaliação dos sinais e fatores de risco. A hipertensão é considerada
                         quando a pressão permanece elevada em pelo menos duas medidas.
                     </p>
-                
+
                     <Illustrations items={[{"alt":"Pessoa sentada com costas apoiadas, pés no chão e braço descoberto apoiado ao nível do coração.","caption":"Posicionamento ilustrativo para medir a pressão arterial.","source":"Ilustração identificada como feita por IA no material fornecido pela equipe.","src":"/images/material-equipe/pressao-posicionamento.png"}]} />
 </section>
 
@@ -87,6 +98,22 @@ const Hipertensao = () => {
                         complicações e manter a pressão em níveis adequados.
                     </p>
                 </section>
+
+                <div className="flex items-center justify-center pt-2 md:col-span-2">
+                        <button
+                            onClick={() => setIsRefModalOpen(true)}
+                            className="inline-flex min-h-11 cursor-pointer items-center gap-2 border-2 border-[#003366] bg-white px-6 py-2 font-bold text-[#003366] transition-colors duration-200 hover:bg-[#003366] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#003366]"
+                        >
+                            <BookOpen size={20} aria-hidden="true" />
+                            Ver Referências
+                        </button>
+                    </div>
+
+                    <ReferenceModal
+                        isOpen={isRefModalOpen}
+                        onClose={() => setIsRefModalOpen(false)}
+                        references={references}
+                    />
             </div>
         </PageLayout>
     )

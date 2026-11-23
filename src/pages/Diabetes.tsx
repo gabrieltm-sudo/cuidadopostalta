@@ -12,18 +12,18 @@ import locaisAplicaçao from '../images/Diabetes/locaisAplicaçao.png'
 
 const Diabetes = () => {
 
-    
+
     const [isRefModalOpen, setIsRefModalOpen] = useState(false);
     const references = [
         "BRASIL. Ministério da Saúde. Diabetes (diabetes mellitus). Brasília, DF: Ministério da Saúde, [s. d.]. Disponível em: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/d/diabetes Acesso em: 9 out. 2026.",
-        "BRASIL. Ministério da Saúde. Comissão Nacional de Incorporação de Tecnologias no Sistema Único de Saúde. Protocolo Clínico e Diretrizes Terapêuticas: diabete melito tipo 2. Brasília, DF: Ministério da Saúde, 2026. Disponível em: https://www.gov.br/saude/pt-br/assuntos/pcdt/d/diabete-melito-tipo-2.pdf/view Acesso em: 9 out. 2026.",
-        "HOSPITAL UNIVERSITÁRIO DA UNIVERSIDADE FEDERAL DO RIO GRANDE (HU-FURG). Cuidados com o armazenamento, preparo e administração de insulina com seringa. Rio Grande, RS: HU-FURG, [s. d.]. Disponível em: https://www.gov.br/hubrasil/pt-br/hospitais-universitarios/regiao-sul/hu-furg/saude/areas-de-apoio-e-de-diagnostico/FORMCA1.PDF Acesso em: 9 out. 2026.",
+        "BRASIL. Ministério da Saúde. Comissão Nacional de Incorporação de Tecnologias no Sistema Único de Saúde. Protocolo Clínico e Diretrizes Terapêuticas: diabete melito tipo 2. Brasília, DF: Ministério da Saúde, 2026. Disponível em: https://www.gov.br/conitec/pt-br/midias/protocolos/2026/pcdt-diabete-melito-tipo-2/@@display-file/file Acesso em: 9 out. 2026.",
+        "HOSPITAL UNIVERSITÁRIO DA UNIVERSIDADE FEDERAL DO RIO GRANDE (HU-FURG). Cuidados com o armazenamento, preparo e administração de insulina com seringa. Rio Grande, RS: HU-FURG, [s. d.]. Disponível em: https://www.gov.br/hubrasil/pt-br/hospitais-universitarios/regiao-sul/hu-furg/saude/areas-de-apoio-e-de-diagnostico/FORMCA1.PDF Acesso em: 9 out. 2026. -- URL quebrado",
         "BRASIL. Ministério da Saúde. Manual do pé diabético: estratégias para o cuidado da pessoa com doença crônica. Brasília, DF: Ministério da Saúde, 2016. Disponível em: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/guias-e-manuais/2016/manual-do-pe-diabetico.pdf/view Acesso em: 9 out. 2026.",
         "Brasil. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Atenção Básica. Estratégias para o cuidado da pessoa com doença crônica : diabetes mellitus / Ministério da Saúde, Secretaria de Atenção à Saúde, Departamento de Atenção Básica. – Brasília : Ministério da Saúde, 2013. 160 p. : il. (Cadernos de Atenção Básica, n. 36). Acesso em: 20 set. 2024.",        "Diabetes (diabetes mellitus) — Ministério da Saúde https://share.google/Xky9WwwD4b8TEqWSa",
-        "Sociedade Brasileira de Diabetes. Diretrizes da Sociedade Brasileira de Diabetes 2019-2020. Disponível em: https://www.diabetes.org.br/profissionais/images/DIRETRIZES-COMPLETA-2019-2020.pdf Acesso em: 20 set. 2024.",
+        "Sociedade Brasileira de Diabetes. Diretrizes da Sociedade Brasileira de Diabetes 2019-2020. Disponível em: https://www.diabetes.org.br/profissionais/images/DIRETRIZES-COMPLETA-2019-2020.pdf Acesso em: 20 set. 2024. -- URL Quebrado",
         "Conselho Regional de Enfermagem, Rio Grande do Sul. Protocolos de Enfermagem na Atenção primária à Saúde: Hipertensão e Diabetes. Porto Alegre: Conselho Regional de Enfermagem, Rio Grande do Sul, 2020. Disponível em:  https://www.portalcoren-rs.gov.br/docs/ProtocolosEnfermagem/ProtocoloEnfermagemHipertensaoDiabetes.pdf Acesso em: 20 set. 2024."
     ]
-    
+
     return (
         <PageLayout
             title="Diabetes Mellitus Tipo 1 e 2"
@@ -46,7 +46,7 @@ const Diabetes = () => {
                     <h2 id="o-que-e" className="bg-[#003366] py-2 text-center font-bold text-white">
                         O que é?
                     </h2>
-                
+
                     <div className="mt-4 grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.7fr)] lg:items-center">
                         <div className="space-y-4">
                             <p>
@@ -114,7 +114,7 @@ const Diabetes = () => {
                             <li>O tratamento visa a manutenção dos níveis de glicose no sangue com acompanhamento regular, insulinoterapia, dieta e exercícios físicos.</li>
                             <li>É necessário injeções diárias de insulina para manterem a glicose no sangue em valores considerados normais (o estado de normalidade da glicemia em jejum é de 70 mg/dl a 100 mg/dl).</li>
                         </ul>
-                    
+
                     <Illustrations items={[{"alt":"Ilustração de uma medição de glicose com glicosímetro.","caption":"Medição de glicose com glicosímetro. O valor desenhado na tela é apenas ilustrativo.","source":"Ilustração identificada como feita por IA no material fornecido pela equipe.","src":"/images/material-equipe/diabetes-glicemia.png"}]} />
 </section>
 
@@ -122,11 +122,11 @@ const Diabetes = () => {
                         <h2 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">Regular x NPH</h2>
                         <ul className="space-y-4 text-base leading-7 text-gray-700">
                             <li className="bg-blue-50 p-3 border border-blue-100">
-                                <strong className="text-blue-900 block mb-1">A insulina Regular:</strong> 
+                                <strong className="text-blue-900 block mb-1">A insulina Regular:</strong>
                                 Tem ação rápida, duração de 8-10h, as doses são feitas 30 minutos antes das refeições e tem o aspecto cristalino.
                             </li>
                             <li className="bg-gray-50 p-3 border border-gray-200">
-                                <strong className="text-blue-900 block mb-1">A insulina NPH:</strong> 
+                                <strong className="text-blue-900 block mb-1">A insulina NPH:</strong>
                                 Tem ação intermediária, duração de 12-18h e tem o aspecto turvo.
                             </li>
                         </ul>
@@ -322,7 +322,7 @@ const Diabetes = () => {
                         Ver Referências
                     </button>
                 </div>
-                
+
                 <ReferenceModal
                     isOpen={isRefModalOpen}
                     onClose={() => setIsRefModalOpen(false)}
