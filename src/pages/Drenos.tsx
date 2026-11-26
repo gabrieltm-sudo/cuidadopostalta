@@ -43,6 +43,7 @@ const Drenos = () => {
 		"Tipos de drenos cirúrgicos e cuidados da enfermagem | Artmed https://share.google/2W57m991VrcUBbha3",
 		"POTTER, P. A.; PERRY, A. G. Fundamentos de Enfermagem. 8. ed. Rio de Janeiro: Elsevier, 2013..",
 		"ANVISA. Agência Nacional de Vigilância Sanitária. Medidas de Prevenção de Infecção Relacionada à Assistência à Saúde. 2017.",
+		"UNIVERSIDADE FEDERAL DO PARÁ. Hospital Universitário João de Barros Barreto. Cuidados com o Dreno Porto-VAC em casa. 2025. https://educapes.capes.gov.br/handle/capes/1171888",
 		"EBSERH. ASSISTÊNCIA AO PACIENTE SUBMETIDO A DRENAGEM TORÁCICA. 2020 Disponível em: https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-nordeste/hu-univasf/acesso-ainformacao/normas/protocolos-institucionais/Assistnciaaopacientesubmetidoadrenagemtorcica.pdf <- URL quebrada -> Obtida na cartilha do Canva"
 	]
 
@@ -56,9 +57,9 @@ const Drenos = () => {
 			</h2>
 
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-				<section className="bg-red border-2 border-gray-200 p-6 md:col-span-2">
+				<section className="bg-white border-2 border-gray-200 p-6 md:col-span-2">
 					<p className="mt-4 rounded border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-800 col-span-2">
-						Não deve ser elevado acima do nível do coração(?), pois o ...
+						Mantenha o reservatório do dreno Suctor/Portovac abaixo do local de inserção, sem encostar no chão. Siga as orientações da equipe de saúde.
 					</p>
 					<h3 className="text-[#003366] text-xl font-bold mb-4 border-b-2 border-[#003366] pb-2">
 						O que é e Finalidade
@@ -85,32 +86,14 @@ const Drenos = () => {
 
 				<section className="bg-white border-2 border-gray-200 p-6 md:col-span-2">
 					<h3 className="text-[#003366] text-xl font-bold mb-4 border-b-2 border-[#003366] pb-2">
-						Passo a passo para limpeza
+						Esvaziamento do reservatório Suctor/Portovac
 					</h3>
 					<div className="p-4">
 						<CarouselImages steps={limpezaPassos} />
 					</div>
 				</section>
 
-				<section className="bg-white border-2 border-gray-200 p-6">
-					<h3 className="text-[#003366] text-xl font-bold mb-4 border-b-2 border-[#003366] pb-2">
-						Limpeza do curativo
-					</h3>
-					<ul className="list-disc text-justify space-y-3 pl-5 leading-7 marker:font-bold marker:text-[#003366] marker:text-lg">
-						<li>
-							Limpeza circular, com gaze e soro fisiológico;
-						</li>
-						<li>
-							Higienizar o extensor com álcool 70%;
-						</li>
-						<li>
-							Sentido da limpeza: inicia-se pelo local de inserção do dreno até a região ao redor da inserção (proximal-distal).
-						</li>
-					</ul>
-					{/* TODO: Modificar imagem para uma melhor */}
-					<ImageFocus src={limpezaCurativo} alt="Forma de limpar curativo" className="mx-auto max-w-full"
-					/>
-				</section>
+
 
 				<section className="bg-white border-2 border-gray-200 p-6">
 					<h3 className="text-[#003366] text-xl font-bold mb-4 border-b-2 border-[#003366] pb-2">
@@ -123,9 +106,7 @@ const Drenos = () => {
 						<li>
 							Após o esvaziamento, deve-se comprimir o dreno para proporcionar vácuo em seu interior;
 						</li>
-						<li>
-							Realizar curativo com gaze e soro fisiológico no local da entrada do dreno, 1x no dia ou se molhado ou sujo; 
-						</li>
+
 						<li>
 							Observar o líquido quanto a cor, aspecto e quantidade;
 						</li>
@@ -133,17 +114,33 @@ const Drenos = () => {
 							Nunca lavar o dreno por dentro;
 						</li>
 						<li>
-							Mantenha o reservatório sanfonado sempre abaixo do local onde o dreno está inserido. O dreno pode ser mantido preso à roupa, evite contato com o chão;
+							Mantenha o reservatório sanfonado sempre abaixo do local onde o dreno está inserido. O dreno pode ser mantido preso à roupa; evite o contato com o chão;
 						</li>
 						<li>
 							Use roupas mais largas para acomodar bem o dreno.
 						</li>
-						<p className="text-justify mt-4 text-lg">
-							Atenção para não puxar o dreno nas mudanças de posição e ao levantar.
-						</p>
+						<li>Atenção para não puxar o dreno nas mudanças de posição e ao levantar.</li>
 					</ul>
 				</section>
 			</div>
+
+<div className="grid grid-cols-1 gap-6 md:grid-cols-2"><section className="bg-white border-2 border-gray-200 p-6 md:col-span-2">
+					<h3 className="text-[#003366] text-xl font-bold mb-4 border-b-2 border-[#003366] pb-2">
+						Limpeza do curativo: cuidados comuns
+					</h3>
+					<p className="mb-4">Realize os cuidados conforme as orientações recebidas para o seu tipo de dreno.</p>
+<ul className="list-disc text-justify space-y-3 pl-5 leading-7 marker:font-bold marker:text-[#003366] marker:text-lg">
+						<li>
+							Limpeza circular, com gaze e soro fisiológico;
+						</li>
+						<li>
+							Sentido da limpeza: inicia-se pelo local de inserção do dreno até a região ao redor da inserção (proximal-distal).
+						</li>
+					</ul>
+
+					<ImageFocus src={limpezaCurativo} alt="Forma de limpar curativo" className="mx-auto max-w-full"
+					/>
+				</section></div>
 
 			<h2
 				id="penrose"
@@ -170,7 +167,7 @@ const Drenos = () => {
 						</p>
 						<ul className="list-disc text-justify space-y-3 pl-5 leading-7 marker:font-bold marker:text-[#003366] marker:text-lg">
 							<li>
-								Evitar o acúmulo de algo que pode tornar-se um fooco de infecção.
+								Evitar o acúmulo de algo que pode tornar-se um foco de infecção.
 							</li>
 						</ul>
 				</section>
@@ -185,7 +182,7 @@ const Drenos = () => {
 							Lave bem as mãos antes de manipular o dreno;
 						</li>
 						<li>
-							Retire a curativo sujo do dreno;
+							Retire o curativo sujo do dreno;
 						</li>
 						<li>
 							Limpe o dreno e a pele ao redor com gaze e soro fisiológico. Seque com gaze;
@@ -196,24 +193,7 @@ const Drenos = () => {
 					</ul>
 				</section>
 
-				<section className="bg-white border-2 border-gray-200 p-6">
-					<h3 className="text-[#003366] text-xl font-bold mb-4 border-b-2 border-[#003366] pb-2">
-						Limpeza do curativo
-					</h3>
-					<ul className="list-disc text-justify space-y-3 pl-5 leading-7 marker:font-bold marker:text-[#003366] marker:text-lg">
-						<li>
-							Limpeza circular com gaze e soro fisiológico;
-						</li>
-						<li>
-							Higienizar o extensor com álcool 70%;
-						</li>
-						<li>
-							Sentido da limpeza: inicia-se pelo local de inserção do dreno até a região ao redor da inserção (proximal-distal).
-						</li>
-					</ul>
-					<ImageFocus src={limpezaCurativo} alt="Forma de limpar curativo" className="mx-auto max-w-full"
-					/>
-				</section>
+
 
 				<section className="bg-white border-2 border-gray-200 p-6 md:col-span-2">
 					<h3 className="text-[#003366] text-xl font-bold mb-4 border-b-2 border-[#003366] pb-2">
@@ -221,7 +201,7 @@ const Drenos = () => {
 					</h3>
 					<ul className="list-disc text-justify space-y-3 pl-5 leading-7 marker:font-bold marker:text-[#003366] marker:text-lg">
 						<li>
-							Se tiver temperatura acima de 37,5°C; 
+							Se tiver temperatura acima de 37,5°C;
 						</li>
 						<li>
 							Sangramento anormal pelo local de inserção do dreno ou pele arroxeada aumentar;

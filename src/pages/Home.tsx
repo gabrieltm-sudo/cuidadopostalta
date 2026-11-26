@@ -1,44 +1,15 @@
 import VideoRender from '../components/VideoRender'
 import { Link } from 'react-router-dom'
-import {
-    Activity,
-    Droplet,
-    HeartPulse,
-    Syringe,
-    Stethoscope,
-    Wind,
-    Cable,
-    Bandage,
-    BedDouble,
-    type LucideIcon,
-} from 'lucide-react'
-
-type Topic = {
-    to: string
-    title: string
-    description: string
-    icon: LucideIcon
-}
-
-const topics: Topic[] = [
-    { to: '/lesao-pressao', title: 'Lesão por Pressão', description: 'Como prevenir e identificar feridas causadas por pressão.', icon: BedDouble },
-    { to: '/diabetes', title: 'Diabetes Mellitus', description: 'Cuidados diários e aplicação de insulina.', icon: Syringe },
-    { to: '/sondas', title: 'Sondas', description: 'Orientações sobre sondas gástrica e enteral.', icon: Stethoscope },
-    { to: '/drenos', title: 'Drenos', description: 'Cuidados e limpeza do dreno e do curativo.', icon: Droplet },
-    { to: '/estomias', title: 'Estomias', description: 'Cuidados com estomias e bolsas coletoras.', icon: Activity },
-    { to: '/traqueostomia', title: 'Traqueostomia', description: 'Orientações para cuidar da traqueostomia.', icon: Wind },
-    { to: '/hipertensao', title: 'Hipertensão Arterial', description: 'Causas, sintomas e como controlar a pressão.', icon: HeartPulse },
-    { to: '/cateter', title: 'Cateter Venoso Central', description: 'Cuidados com o cateter no dia a dia.', icon: Cable },
-    { to: '/feridaOperatoria', title: 'Ferida Operatória', description: 'Como cuidar do local da cirurgia.', icon: Bandage },
-]
+import { ArrowRight } from 'lucide-react'
+import { topicGroups } from '../topics'
 
 const Home = () => (
     <>
-        <section className="border-b-8 border-[#0A4D68] bg-[#003366] px-4 py-12 text-white sm:px-8 sm:py-16">
-            <div className="mx-auto max-w-4xl">
-                <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
+        <section className="border-b-8 border-[#0A4D68] bg-[#003366] px-4 py-8 text-white sm:px-8 sm:py-12">
+            <div className="mx-auto max-w-6xl">
+                <h1 className="text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl">
                     Cartilha de Cuidados Pós-Alta Hospitalar
-                </h2>
+                </h1>
                 <p className="mt-4 text-lg text-blue-100 text-pretty">
                     O cuidado continua em casa. Esta cartilha digital foi elaborada para apoiar você e
                     sua família durante o processo de recuperação, trazendo orientações seguras,
@@ -52,25 +23,20 @@ const Home = () => (
                 <h2 className="mb-6 border-b-2 border-gray-200 pb-2 text-2xl font-bold text-[#003366]">
                     Escolha o assunto que deseja consultar:
                 </h2>
-            <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {topics.map(({ to, title, description, icon: Icon }) => (
-                    <li key={to}>
-                        <Link
-                            to={to}
-                            className="flex h-full flex-col gap-3 border-2 border-gray-200 bg-white p-6 transition-colors hover:border-[#003366] focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-400"
-                        >
-                            <Icon size={36} className="text-[#003366]" aria-hidden="true" />
-                            <h3 className="border-b-2 border-[#003366] pb-2 text-xl font-bold text-[#003366]">
-                                {title}
-                            </h3>
-                            <p className="text-base leading-7 text-gray-700">{description}</p>
-                            <span className="mt-auto font-semibold text-[#003366]">
-                                Acessar →
-                            </span>
+            {topicGroups.map(group => <section key={group.title} className="mb-10">
+                <h3 className="mb-4 text-xl font-bold text-[#003366]">{group.title}</h3>
+                <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {group.topics.map(topic => <li key={topic.to}>
+                        <Link to={topic.to} className="flex h-full flex-col gap-3 border-2 border-gray-200 bg-white p-6 hover:border-[#003366] focus-visible:ring-4 focus-visible:ring-blue-400">
+                            <topic.icon size={32} className="text-[#003366]" aria-hidden="true" />
+                            <h4 className="border-b-2 border-[#003366] pb-2 text-xl font-bold text-[#003366]">{topic.title}</h4>
+                            <p>{topic.description}</p>
+                            <span className="mt-auto flex items-center gap-2 font-semibold text-[#003366]">Acessar <ArrowRight size={18} aria-hidden="true"/></span>
                         </Link>
-                    </li>
-                ))}
-            </ul>
+                    </li>)}
+                </ul>
+            </section>)}
+
             </div>
 
             <div className="mx-auto w-full max-w-7xl px-4 py-8">
@@ -100,7 +66,7 @@ const Home = () => (
                 </div>
                 <div className="md:text-right">
                     <p className="text-gray-700 md:text-right">Apoio Institucional:</p>
-                    <p className="font-bold text-gray-500">UNIPAMPA • SUS</p>
+                    <p className="font-bold text-gray-500">UNIPAMPA · SUS</p>
                 </div>
             </div>
         </footer>

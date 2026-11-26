@@ -1,3 +1,4 @@
+import Illustrations from '../components/Illustrations'
 import { useState } from 'react'
 import PageLayout from '../components/PageLayout'
 import CarouselImages from '../components/CarouselImages'
@@ -6,17 +7,16 @@ import ImageFocus from '../components/ImageFocus'
 import ReferenceModal from '../components/ReferenceModal'
 import { BookOpen } from 'lucide-react'
 
-import imagemGenerica from '../images/Sondas/imagemGenerica.png'
+import vesicalPosicao from '../images/Sondas/vesical-posicao.png'
+import vesicalFixacaoFeminina from '../images/Sondas/vesical-fixacao-feminina.png'
+import vesicalFixacaoMasculina from '../images/Sondas/vesical-fixacao-masculina.png'
+import vesicalBolsa from '../images/Sondas/vesical-bolsa.png'
 import sondaGastricaLoc from '../images/Sondas/sondaGastricaLoc.png'
 import sondaEntericaLoc from '../images/Sondas/sondaEntericaLoc.png'
 import sondaGastricaViaUnica from '../images/Sondas/sondaGastricaViaUnica.png'
 import sondaEntericaDuasVias from '../images/Sondas/sondaEntericaViaDupla.png'
 
-const ImagePlaceholder = ({ label }: { label: string }) => (
-	<div className="flex min-h-40 w-full items-center justify-center border-2 border-dashed border-gray-400 bg-gray-100 p-4 text-center text-sm font-medium leading-5 text-gray-600">
-		{label}
-	</div>
-)
+const fonteCartilha = 'Cartilha de cuidados pós-alta hospitalar do projeto, p. 11.'
 
 const sondaGastrica = [
   { id: 1, image: sondaGastricaLoc, text: 'Localização da Sonda Gástrica (Via única)', alt: 'Imagem ilustrativa mostrando a localização da sonda gástrica' },
@@ -37,12 +37,13 @@ const Sondas = () => {
 
 	const [isRefModalOpen, setIsRefModalOpen] = useState(false);
 	const references = [
+		"Ministério da Saúde — Orientações para o cuidado com o paciente no ambiente domiciliar. https://bvsms.saude.gov.br/bvs/publicacoes/orientacoes_cuidado_paciente_ambiente_domiciliar.pdf",
 		"Sondas, Catéteres e Drenos – Quero Instrumentar FMRP-USP https://share.google/RGsrWN80tChVmguPs",
 		"Tipos de drenos cirúrgicos e cuidados da enfermagem | Artmed https://share.google/2W57m991VrcUBbha3",
 		"ARAÚJO, I. S.; et al.Guia multiprofissional de orientação para pacientes em uso de nutrição enteral domiciliar. Petrolina: HEWAB, 2017. Disponível em: https://nutritotal.com.br/pro/wp-content/uploads/2019/03/Guia_Nutri%C3%A7%C3%A3o_Enteral.pdf",
 		"BRASIL. Ministério da Saúde. Mantenha seu sorriso fazendo a higiene bucal corretamente. Brasília, 2012. Disponível em: https://bvsms.saude.gov.br/bvs/publicacoes/mantenha_sorriso_fazendo_higiene_bucal.pdf",
 		"Brasil. Ministério da Saúde. Manual de terapia nutricional na atenção especializada hospitalar no âmbito do Sistema Único de Saúde – SUS [recurso eletrônico]. Brasília: Ministério da Saúde, 2016. Disponível em: https://bvsms.saude.gov.br/bvs/publicacoes/manual_terapia_nutricional_atencao_especializada.pdf",
-		"MARQUIORE, L. F; et al. Programa de assistência odontológica a pacientes de transplante da UFMG: orientações de higine bucal e cuidados. Maria Elisa de Souza e Silva - Belo Horizonte: Faculdade de Odontologia, 2021. Disponível em: https://www.odonto.ufmg.br/ecv-odr/wp-content/uploads/sites/23/2021/05/PAOPT-Cartilha-ISBN.pdf",
+		"MARQUIORE, L. F; et al. Programa de assistência odontológica a pacientes de transplante da UFMG: orientações de higiene bucal e cuidados. Maria Elisa de Souza e Silva - Belo Horizonte: Faculdade de Odontologia, 2021. Disponível em: https://www.odonto.ufmg.br/ecv-odr/wp-content/uploads/sites/23/2021/05/PAOPT-Cartilha-ISBN.pdf",
 		"POTTER, Patricia; PERRY, Anne Griffin. Fundamentos da Enfermagem. Rio de Janeiro: Elsevier, 2013.",
 		"SOCIEDADE BRASILEIRA DE UROLOGIA (SBU). Recomendações SBU 2016. Cateterismo Vesical. Intermitente. 2016. Disponível em: https://portaldaurologia.org.br/medicos/wp-content/uploads/2016/11/Recomenda%C3%A7%C3%B5es_Cateterismo-Vesical-SBU-2016_final.pdf",
 	]
@@ -57,6 +58,10 @@ const Sondas = () => {
 			</h2>
 
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+				<p className="mt-4 rounded border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-800 md:col-span-2">
+					Deve ser utilizada apenas a dieta prescrita, não sendo permitido o uso de outros alimentos, como leite, sucos, vitaminas, sopas, etc.
+				</p>
 				<section className="bg-white border-2 border-gray-200 p-6 text-base leading-7">
 					<h3 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">
 						Sonda Gástrica
@@ -86,10 +91,6 @@ const Sondas = () => {
 						<CarouselImages steps={sondaEnterica} />
 					</div>
 				</section>
-
-				<p className="mt-4 rounded border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-800 col-span-2">
-					Deve ser utilizado apenas a dieta prescrita, não sendo permitido o uso de outros alimentos, como leite, sucos, vitaminas, sopas, etc.
-				</p>
 				
 				<section className="bg-white border-2 border-gray-200 p-6 text-base leading-7 md:col-span-2">
 					<h3 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">
@@ -124,7 +125,9 @@ const Sondas = () => {
 						<b>OBS:</b> Após o término da dieta, mantenha a cabeceira do paciente
 						elevada de 45° a 90° por <b>30 minutos</b>.
 					</p>
-				</section>
+				
+                    <Illustrations items={[{"alt":"Ilustração de uma pessoa com cabeceira elevada recebendo dieta por sonda.","caption":"Ilustração da administração de dieta por sonda.","src":"/images/material-equipe/sonda-administracao-dieta.png"}]} />
+</section>
 
 				<section className="bg-white border-2 border-gray-200 p-6 text-base leading-7">
 					<h3 className="text-[#003366] text-xl font-bold mb-4 border-b-2 border-[#003366] pb-2">
@@ -143,7 +146,9 @@ const Sondas = () => {
 						em formato de I e colar uma parte no nariz e outra na sonda. Cuide da
 						pele, mantendo a região da fixação sempre limpa.
 					</p>
-				</section>
+				
+                    <Illustrations items={[{"alt":"Ilustração de manuseio da sonda com indicação para evitar puxá-la.","caption":"Atenção ao manuseio para evitar a tração da sonda.","src":"/images/material-equipe/sonda-evitar-tracao.png"}]} />
+</section>
 
 				<section className="bg-white border-2 border-gray-200 p-6 text-base leading-7">
 					<h3 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">
@@ -247,7 +252,6 @@ const Sondas = () => {
 						Observação: Esteja atento a sinais de infecção, irritação ou outros
 						problemas, como sangramento ou dor durante o procedimento. Relate
 						qualquer problema ao profissional de saúde mais próximo.
-						<ImageFocus src={imagemGenerica} alt="Imagem de alerta sobre sinais de infecção" className="mx-auto max-w-full h-80" />
 					</div>
 				</section>
 			</div>
@@ -270,7 +274,7 @@ const Sondas = () => {
 						fixa dentro da bexiga, com um balonete insuflado.
 					</p>
 					<div className="mt-5">
-						<ImagePlaceholder label="Posição correta da sonda" />
+						<Illustrations items={[{ src: vesicalPosicao, alt: 'Desenho da sonda passando pela uretra e do balonete dentro da bexiga.', caption: 'Posição da sonda vesical de demora na bexiga.', source: fonteCartilha }]} />
 					</div>
 				</section>
 
@@ -284,7 +288,10 @@ const Sondas = () => {
 						posição mais natural do pênis.
 					</p>
 					<div className="mt-5">
-						<ImagePlaceholder label="Locais de fixação" />
+						<Illustrations items={[
+							{ src: vesicalFixacaoFeminina, alt: 'Ilustração da sonda fixada na coxa da paciente.', caption: 'Exemplo de fixação em paciente mulher.', source: fonteCartilha },
+							{ src: vesicalFixacaoMasculina, alt: 'Ilustração de locais de fixação externa em paciente homem.', caption: 'Exemplos de fixação em paciente homem.', source: fonteCartilha },
+						]} />
 					</div>
 				</section>
 
@@ -292,6 +299,10 @@ const Sondas = () => {
 					<h3 className="mb-3 border-b-2 border-[#003366] pb-2 text-lg font-bold leading-6 text-[#003366] sm:text-xl">
 						Cuidados com a Sonda
 					</h3>
+					<figure className="mb-5 max-w-xs">
+						<ImageFocus src={vesicalBolsa} alt="Bolsa coletora de urina pendurada na lateral da cama." className="mx-auto max-w-full" />
+						<figcaption className="mt-2 text-sm text-gray-700">Bolsa coletora na lateral da cama. Fonte: {fonteCartilha}</figcaption>
+					</figure>
 					<ul className="list-disc text-justify space-y-3 pl-5 leading-7 marker:font-bold marker:text-[#003366] marker:text-lg">
 						<li>
 							Sempre manusear a bolsa coletora e a sonda com as mãos limpas e

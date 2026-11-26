@@ -1,3 +1,4 @@
+import Illustrations from '../components/Illustrations'
 import { useState } from 'react'
 import PageLayout from '../components/PageLayout'
 
@@ -14,6 +15,7 @@ const Traqueostomia = () => {
 
     const [isRefModalOpen, setIsRefModalOpen] = useState(false);
     const references = [
+		"Imagem indicada no material da equipe: Hospital de Clínicas de Porto Alegre. https://www.hcpa.edu.br/area-do-paciente-apresentacao/area-do-paciente-sua-saude/educacao-em-saude?catid=2&id=15&m=0&task=download.send",
         "pes_019_-_traqueostomia_orientações_para_pacientes_e_familiares_rev2_2025-maio_pub.pdf https://share.google/t2BNevsV9hnhnlSql",
         "NATIONAL HEALTH SERVICE (NHS). Tracheostomy. [S. l.]: NHS, [s. d.]. Disponível em: https://www.nhs.uk/tests-and-treatments/tracheostomy/. Acesso em: 9 out. 2026.",
         "HOSPITAL REGIONAL DE PIRACICABA. Traqueostomia. Piracicaba: Hospital Regional de Piracicaba, [s. d.]. Disponível em: https://www.hrp.unicamp.br/wp-content/uploads/2022/01/traqueostomia.pdf. Acesso em: 9 out. 2026.",
@@ -29,6 +31,7 @@ const Traqueostomia = () => {
                 CUIDADOS COM TRAQUEOSTOMIA
             </h2>
 
+
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <section className="bg-white border-2 border-gray-200 p-6 md:col-span-2">
                     <h3 className="mb-4 border-b-2 border-[#003366] pb-2 text-xl font-bold text-[#003366]">
@@ -41,7 +44,9 @@ const Traqueostomia = () => {
                         É um dispositivo importante para a respiração, mas exige atenção
                         diária para manter a limpeza e prevenir infecções e obstruções.
                     </p>
-                </section>
+                
+                    <Illustrations items={[{"alt":"Desenho da localização da traqueostomia, à frente da traqueia.","caption":"Localização da traqueostomia.","src":"/images/material-equipe/traqueostomia-localizacao.png"}]} />
+</section>
 
                 <section id="cuidados" className="scroll-mt-24 bg-white border-2 border-gray-200 p-6">
                     <h3 className="mb-4 border-b-2 border-[#003366] pb-2 text-xl font-bold text-[#003366]">
@@ -54,7 +59,9 @@ const Traqueostomia = () => {
                         <li>Manter sempre um aparato de emergência disponível;</li>
                         <li>Seguir as orientações do profissional responsável pela troca do tubo.</li>
                     </ul>
-                </section>
+                
+                    <Illustrations items={[{"alt":"Fotografia de cânula de traqueostomia fixada no pescoço.","caption":"Exemplo de cânula de traqueostomia.","src":"/images/material-equipe/traqueostomia-canula.png"}]} />
+</section>
 
                 <section id="higiene" className="scroll-mt-24 bg-white border-2 border-gray-200 p-6">
                     <h3 className="mb-4 border-b-2 border-[#003366] pb-2 text-xl font-bold text-[#003366]">
